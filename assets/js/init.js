@@ -5,7 +5,7 @@
 */
 
 skel.init({
-	prefix: '{{ site.baseurl }}/assets/css/style',
+	prefix: '/eiipiihomepage/assets/css/style',
 	resetCSS: true,
 	boxModel: 'border',
 	grid: {
