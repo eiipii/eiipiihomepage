@@ -1,3 +1,8 @@
 name: Linear
 description: Linear template for Jekyll
 paginate: 10
+
+description: > # this means to ignore newlines until "baseurl:"
+  eiipii.com - site description and head meta
+  footer comes with theme layout - we'll probably change it anyway, so I'm leaving it for now
+baseurl: "/eiipiihomepage" # MESSY PART WITH THE gh-pages
