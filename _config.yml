@@ -1,5 +1,5 @@
-name: Linear
-description: Linear template for Jekyll
+name: EiiPii
+description: EiiPii homepage
 paginate: 10
 
 description: > # this means to ignore newlines until "baseurl:"

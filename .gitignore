@@ -2,3 +2,4 @@ _site/
 .sass-cache/
 assets/images/bak/
 assets/images/fullsize/
+.idea/
