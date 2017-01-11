@@ -28,13 +28,16 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 <body>
 
 	<!-- Header -->
-	<div id="header">
+	<div id="header"> <!-- TODO moved it to match logo/text position from PDF; style should be inlined after final changes here -->
 		{% include nav.html %}
 		<div class="container">
 			<!-- Logo -->
 			<div id="logo">
-				<p id="eiipii_logo"></p>
-				<span class="tag">Knowledge and skills with passion</span>
+				<p id="eiipii_logo_border"></p>
+				<span class="tag"> <!-- TODO I'm quite sure this ("Developing with skills" sizes and div header margins) is done in poor style - have to check it later on mobiles -->
+					<p style="font-size: 220%; margin: 1em 0 0.5em">Developing</p>
+					<p style="font-size: 150%; margin: 0">knowledge and skills with passion</p>
+				</span>
 			</div>
 		</div>
 	</div>

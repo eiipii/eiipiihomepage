@@ -61,7 +61,7 @@
 		margin-bottom: 1.6em;
 	}
 	
-		header h2
+		header h2 /*TODO check this on mobiles*/
 		{
 			font-size: 2em;
 		}
@@ -230,6 +230,21 @@
 	}
 
 	#featured h3
+	{
+		padding: 1.5em 0em;
+		font-size: 1.4em;
+	}
+
+/*********************************************************************************/
+/* Featured2                                                                      */
+/*********************************************************************************/
+
+	#featured2
+	{
+		padding: 0em 0em 3em 0em;
+	}
+
+	#featured2 h3
 	{
 		padding: 1.5em 0em;
 		font-size: 1.4em;
