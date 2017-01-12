@@ -67,8 +67,8 @@
 	}
 
 
-	#services {
-		width: 1600px;
+	#services { /*TODO thank to this quite wide div, the site on 1080 & 720 monitors looks close to the PDF - but less wide resolution require fixing later (no separate values in style.css and mobile.css) */
+		width: 1600px; /* TODO - also ,max-width would be better, but then other style override it even on 1080 - got to check it later */
 	}
 
 	#services header{

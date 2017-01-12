@@ -22,7 +22,7 @@
 	body,input,textarea,select
 	{
 		font-family: 'Roboto', sans-serif;
-		font-size: 12pt;
+		font-size: 100%;  /*TODO style uses size in pt (original template), em (mainly) and sometimes in % - in the end this should be changed according to best practice approach (body font 100%, no px/pt, rest in em? didn't check it yet); AFTER HANDLING INLINED STYLES*/
 		font-weight: 400;
 		line-height: 1.75em;
 		color: #777;
@@ -1097,16 +1097,30 @@
 /* Graphic element from PDF project - color on right side, blue                  */
 /*********************************************************************************/
 
+/* ADDING IMAGES */
+/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */
 
+.imageTemp{
+	background: url(../images/redlogo.png) no-repeat center center;
+	background-size: 40%;
+}
+
+.imageNiezbednik{
+	background: url(../images/niezbednikTEMP.png) no-repeat center center;
+	background-size: 70%;
+}
+
+/* END OF IMAGES */
 
 
 .total-height {
 	height: 14em;
 	z-index: 0;
-
 }
 
-.blue-cut {
+/* *-normal (text on right side) OR *-mirror (text on left side) */
+
+.color-cut-normal {
 	display: inline;
 	position: absolute;  /* TODO hack here - using relative position for white-left and absolute for the rest resulted in proper position (bordered left side is inherited), but I expect some problems later*/
 	background-color: WHITE;
@@ -1116,8 +1130,18 @@
 	z-index: 1;
 }
 
-.white-left {
+.color-cut-mirror {
+	display: inline;
+	position: absolute;  /* TODO hack here - using relative position for white-left and absolute for the rest resulted in proper position (bordered left side is inherited), but I expect some problems later*/
+	background-color: WHITE;
+	height: 80%;
+	width: 60%;
+	border-radius: 2.5em;
+	z-index: 1;
+	right: 20px;
+}
 
+.white-for-image-normal {
 	height: 80%;
 	position: relative;
 	display: inline;
@@ -1125,54 +1149,89 @@
 	width: 60%;
 	border: 1px solid grey;
 	z-index: 2;
-
-
 }
 
-.blue-right {
-	background-color: blue;
+.white-for-image-mirror {
+	height: 80%;
+	position: relative;
+	display: inline;
+	border-radius: 2.5em;
+	width: 60%;
+	border: 1px solid grey;
+	z-index: 2;
+	float: right;
+	left: -10px; /* TODO as all px positioning here, it probably should be in em or % (or not at all) */
+}
+
+.color-for-text-normal {
+	background-color: black;
 	z-index: 0;
 	display: inline;
 	position: absolute;
-	right: 20px;
-	float: right;
 	height: 80%;
 	width: 40%;
-	border-top-right-radius: 2.5em;
-	border-bottom-right-radius: 2.5em;
+	right: 20px;
+	float: right;
 }
 
-/* classes for left/right text (on background div) and img (on white background div with rounded border */
-
-.leftob{
-
+.color-for-text-mirror {
+	background-color: black;
+	z-index: 0;
+	display: inline;
+	position: absolute;
+	height: 80%;
+	width: 40%;
+	float: left;
 }
 
-.rightOb{
-
-}
-
-/* imageOb is a general class for part with image*/
-.imageOb{
-	background: url(../images/redlogo.png) no-repeat center center;
-	background-size: 40%;
-}
-
-/* those classes set particular image */
-.imageNiezbednik{
-	background-image: url(../images/niezbednikTEMP.png);
-	background-size: 70%;
-}
-
-.textOb{
-/*	position: relative;
-	top: 15%;
-	left: 22%; TODO achived this with margins, not sure if better solution - check mobile later*/
+.text-on-gradient-normal{
+	/* TODO proper positioning with margins with margins, not sure if better solution - check mobile later*/
 	margin: 1em 0 0 2em;
 	font-size: 1.8em;
 	font-weight: 600;
 	color: white;
 	line-height: 1em;
 }
+
+.text-on-gradient-mirror{
+	/* TODO proper positioning with margins with margins, not sure if better solution - check mobile later*/
+	margin: 1em 1.4em 0 0.6em;
+	font-size: 1.8em;
+	font-weight: 600;
+	color: white;
+	line-height: 1em;
+}
+
+
+/*********************************************************************************/
+/* Gradients for backgrounds in objects - a browser-safe version from w3c        */
+/*********************************************************************************/
+
+.blueGrad {
+	background: blue; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, dodgerblue, darkblue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, dodgerblue, darkblue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, dodgerblue, darkblue); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, dodgerblue, darkblue); /* Standard syntax */
+}
+
+.greenGrad {
+	background: green; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, greenyellow, darkgreen); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, greenyellow, darkgreen); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, greenyellow, darkgreen); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, greenyellow, darkgreen); /* Standard syntax */
+}
+
+.redGrad {
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, orange, darkred); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, orange, darkred); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, orange, darkred); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, orange, darkred); /* Standard syntax */
+}
+
+
+
 
 
