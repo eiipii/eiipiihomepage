@@ -139,6 +139,11 @@
 		{
 			margin-bottom: 3em;
 		}
+
+		section.portfolio
+		{
+			margin-bottom: 2em;
+		}
 		
 		section > :last-child,
 		article > :last-child
@@ -920,6 +925,13 @@
 	}
 
 
+	#sidebar /* TODO added this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
+	{
+		position: relative;
+		z-index: 5;
+	}
+
+
 	/* TODO - services style (used for services and portfolio) have a 1600 width in PDF and in style-desktop - have to define other style for mobile and small screens */
 
 	}
@@ -1090,18 +1102,17 @@
 
 .total-height {
 	height: 14em;
-	background-color: white;
-	margin: 0 0 1em 0;
+	z-index: 0;
+
 }
 
 .blue-cut {
 	display: inline;
-	position: absolute;  /* TODO hack here - using relative position for white-left and absolute for the rest resulted in proper position (left side is inherited), but I expect some problems later*/
+	position: absolute;  /* TODO hack here - using relative position for white-left and absolute for the rest resulted in proper position (bordered left side is inherited), but I expect some problems later*/
 	background-color: WHITE;
 	height: 80%;
-	width: 65%;
+	width: 60%;
 	border-radius: 2.5em;
-	left: 20px;
 	z-index: 1;
 }
 
