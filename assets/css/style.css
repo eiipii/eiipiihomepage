@@ -1079,4 +1079,55 @@
 			margin: 0;
 			font-weight: 300;
 			color: rgba(255,255,255,.6);
-		}	
+		}
+
+/*********************************************************************************/
+/* Graphic element from PDF project - color on right side, blue                  */
+/*********************************************************************************/
+
+
+
+
+.total-height {
+	height: 20em;
+	background-color: white;
+}
+
+.blue-cut {
+	display: inline;
+	position: absolute;
+	background-color: WHITE;
+	height: 80%;
+	width: 65%;
+	border-radius: 2.5em;
+	top: 2em;
+	left: 20px;
+	z-index: 1;
+}
+
+.white-left {
+	background-color: white;
+	height: 80%;
+	position: absolute;
+	top: 2em;
+	left: 20px;
+	display: inline;
+	border-radius: 2.5em;
+	width: 60%;
+	border: 1px solid grey;
+	z-index: 2;
+}
+
+.blue-right {
+	background-color: blue;
+	z-index: 0;
+	display: inline;
+	position: absolute;
+	top: 2em;
+	right: 20px;
+	float: right;
+	height: 80%;
+	width: 40%;
+	border-top-right-radius: 2.5em;
+	border-bottom-right-radius: 2.5em;
+}

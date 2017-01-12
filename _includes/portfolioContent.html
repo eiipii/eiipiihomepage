@@ -1,17 +1,25 @@
 <!-- portfolio content - right hand side, div class important -->
 <div id="content" class="8u skel-cell-important">
 
-    <section id="niezbednik">
-        <div class="media">
-            <img class="d-flex mr-3" src="holder.js/64x64" alt="Generic placeholder image">
-            <div class="media-body">
-                <h5 class="mt-0">Media heading</h5>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    <!-- TODO below is work-in-progress graphical element based on bootstrap - still some problems with position (something is inherited badly) and height -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 total-height">
+
+                <!-- div for cut in blue background -->
+                <div class="col-lg-8 blue-cut"></div>
+
+                <!-- div white left - icon should be placed here -->
+                <div class="col-lg-8 white-left">
+                </div>
+                <!-- div blue right, text should be placed here -->
+                <div class="col-lg-4 blue-right">
+                </div>
             </div>
         </div>
-        <header style="margin-bottom: 3em">
-            <h2>(TODO)Niezbędnik Inteligenta</h2> <!--TODO section graphics-->
-        </header>
+
+
+    <section id="niezbednik">
         <p>Our customer builds systems used by energy providers to build long-term client relationships, increase efficiency in energy use and manage energy demand.</p>
         <p>We are helping to build a big data system, capable of processing huge amounts of data daily and later analysing them using both statistical and machine learning methods.</p>
         <p><b>Technologies:</b> Scala, Akka (Actors, Streams, Http), Cassandra, Spark, Ansible</p>
