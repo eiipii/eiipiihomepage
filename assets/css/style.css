@@ -1089,18 +1089,18 @@
 
 
 .total-height {
-	height: 20em;
+	height: 14em;
 	background-color: white;
+	margin: 0 0 1em 0;
 }
 
 .blue-cut {
 	display: inline;
-	position: absolute;
+	position: absolute;  /* TODO hack here - using relative position for white-left and absolute for the rest resulted in proper position (left side is inherited), but I expect some problems later*/
 	background-color: WHITE;
 	height: 80%;
 	width: 65%;
 	border-radius: 2.5em;
-	top: 2em;
 	left: 20px;
 	z-index: 1;
 }
@@ -1108,9 +1108,7 @@
 .white-left {
 	background-color: white;
 	height: 80%;
-	position: absolute;
-	top: 2em;
-	left: 20px;
+	position: relative;
 	display: inline;
 	border-radius: 2.5em;
 	width: 60%;
@@ -1123,7 +1121,6 @@
 	z-index: 0;
 	display: inline;
 	position: absolute;
-	top: 2em;
 	right: 20px;
 	float: right;
 	height: 80%;
