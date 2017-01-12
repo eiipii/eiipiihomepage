@@ -1117,7 +1117,7 @@
 }
 
 .white-left {
-	background-color: white;
+
 	height: 80%;
 	position: relative;
 	display: inline;
@@ -1125,6 +1125,8 @@
 	width: 60%;
 	border: 1px solid grey;
 	z-index: 2;
+
+
 }
 
 .blue-right {
@@ -1139,3 +1141,38 @@
 	border-top-right-radius: 2.5em;
 	border-bottom-right-radius: 2.5em;
 }
+
+/* classes for left/right text (on background div) and img (on white background div with rounded border */
+
+.leftob{
+
+}
+
+.rightOb{
+
+}
+
+/* imageOb is a general class for part with image*/
+.imageOb{
+	background: url(../images/redlogo.png) no-repeat center center;
+	background-size: 40%;
+}
+
+/* those classes set particular image */
+.imageNiezbednik{
+	background-image: url(../images/niezbednikTEMP.png);
+	background-size: 70%;
+}
+
+.textOb{
+/*	position: relative;
+	top: 15%;
+	left: 22%; TODO achived this with margins, not sure if better solution - check mobile later*/
+	margin: 1em 0 0 2em;
+	font-size: 1.8em;
+	font-weight: 600;
+	color: white;
+	line-height: 1em;
+}
+
+
