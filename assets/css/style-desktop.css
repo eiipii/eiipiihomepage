@@ -1,5 +1,3 @@
----
----
 /*
 	Linear by TEMPLATED
     templated.co @templatedco
@@ -68,8 +66,8 @@
 		font-size: 2.4em;
 	}
 
-{% comment %} /*TODO thank to this quite wide div, the site on 1080 & 720 monitors looks close to the PDF - but less wide resolution require fixing later (no separate values in style.css and mobile.css) */
-/* TODO - also ,max-width would be better, but then other style override it even on 1080 - got to check it later */ {% endcomment %}
+ /*TODO thank to this quite wide div, the site on 1080 & 720 monitors looks close to the PDF - but less wide resolution require fixing later (no separate values in style.css and mobile.css) */
+/* TODO - also ,max-width would be better, but then other style override it even on 1080 - got to check it later */ 
 	#services {
 		width: 1600px;
 	}

@@ -1,5 +1,3 @@
----
----
 /*
 	Linear by TEMPLATED
     templated.co @templatedco
@@ -21,7 +19,7 @@
 		background: #161616;
 	}
 
-{% comment %}/*TODO style uses size in pt (original template), em (mainly) and sometimes in % - in the end this should be changed according to best practice approach (body font 100%, no px/pt, rest in em? didn't check it yet); AFTER HANDLING INLINED STYLES*/{% endcomment %}
+/*TODO style uses size in pt (original template), em (mainly) and sometimes in % - in the end this should be changed according to best practice approach (body font 100%, no px/pt, rest in em? didn't check it yet); AFTER HANDLING INLINED STYLES*/
 	body,input,textarea,select
 	{
 		font-family: 'Roboto', sans-serif;
@@ -775,7 +773,7 @@
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
-{% comment %}/*<!-- TODO background, when uploading final image, check 1000px and mobile css -->*/{% endcomment %}
+/*<!-- TODO background, when uploading final image, check 1000px and mobile css -->*/
 	#header
 	{
 		position: relative;
@@ -927,7 +925,7 @@
 		padding-bottom: 0.50em;
 	}
 
-{% comment %}/* TODO added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */{% endcomment %}
+/* TODO added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
 	#sidebar
 	{
 		position: relative;
@@ -935,7 +933,7 @@
 	}
 
 
-	{% comment %}/* TODO - services style (used for services and portfolio) have a 1600 width in PDF and in style-desktop - have to define other style for mobile and small screens */{% endcomment %}
+	/* TODO - services style (used for services and portfolio) have a 1600 width in PDF and in style-desktop - have to define other style for mobile and small screens */
 
 	}
 	#services header{
@@ -1100,8 +1098,8 @@
 /* Graphic element from PDF project - color on right side, blue                  */
 /*********************************************************************************/
 
-{% comment %}/* ADDING IMAGES */{% endcomment %}
-{% comment %}/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */{% endcomment %}
+/* ADDING IMAGES */
+/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */
 
 .imageTemp{
 	background: url(../images/redlogo.png) no-repeat center center;
@@ -1125,10 +1123,10 @@
 	z-index: 0;
 }
 
-{% comment %}/* *-normal (text on right side) OR *-mirror (text on left side) */ {% endcomment %}
+/* *-normal (text on right side) OR *-mirror (text on left side) */ 
 
-{% comment %}/* TODO POSITIONING of color-cut-normal/mirror, white-white-for-image-normal/mirror & color-for-text-norma/mirror. possibly hack here - used relative position for white-left, float for right, and absolute for the rest, with some left/right properties; it worked, but it's definitely a chaotic, not clean approach. exactly the same case is in Team page. */{% endcomment %}
-{% comment %}/* TODO - SLIGHTLY UNEVEN COLOR-CUT ANGLE (compared to color-for-text border radius ratio) IN PORTFOLIO AND TEAM - it looks OK now, but it's not mathematically correct. Setting height of color-cut div bigger than the color-for-text div and vertical centering with same radius would result in better, but it messed with the box model, so I left it */{% endcomment %}
+/* TODO POSITIONING of color-cut-normal/mirror, white-white-for-image-normal/mirror & color-for-text-norma/mirror. possibly hack here - used relative position for white-left, float for right, and absolute for the rest, with some left/right properties; it worked, but it's definitely a chaotic, not clean approach. exactly the same case is in Team page. */
+/* TODO - SLIGHTLY UNEVEN COLOR-CUT ANGLE (compared to color-for-text border radius ratio) IN PORTFOLIO AND TEAM - it looks OK now, but it's not mathematically correct. Setting height of color-cut div bigger than the color-for-text div and vertical centering with same radius would result in better, but it messed with the box model, so I left it */
 .color-cut-normal {
 	display: inline;
 	position: absolute;
@@ -1159,7 +1157,7 @@
 	border: 1px solid grey;
 	z-index: 2;
 }
-{% comment %}/* about left: -10px; - see POSITIONGING. also, as all px positioning here, it probably should be in em or % (or not at all) */{% endcomment %}
+/* about left: -10px; - see POSITIONGING. also, as all px positioning here, it probably should be in em or % (or not at all) */
 .white-for-image-mirror {
 	height: 80%;
 	position: relative;
@@ -1193,7 +1191,7 @@
 	float: left;
 }
 
-{% comment %}/* proper positioning achieved with em here, not sure if better solution - check mobile later*/{% endcomment %}
+/* proper positioning achieved with em here, not sure if better solution - check mobile later*/
 .text-on-gradient-normal{
 	margin: 1em 0 0 2em;
 	font-size: 1.8em;
@@ -1202,7 +1200,7 @@
 	line-height: 1em;
 }
 
-{% comment %}/* as above */{% endcomment %}
+/* as above */
 .text-on-gradient-mirror{
 	margin: 1em 1.4em 0 0.6em;
 	font-size: 1.8em;
@@ -1217,11 +1215,11 @@
 /*********************************************************************************/
 
 
-{% comment %}/* ADDING TEAM PHOTOS */{% endcomment %}
-{% comment %}/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */{% endcomment %}
-{% comment %}/* photos with 600x600 resolution should have background-size X to */{% endcomment %}
+/* ADDING TEAM PHOTOS */
+/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */
+/* photos with 600x600 resolution should have background-size X to */
 
-{% comment %}/*TODO width here should automatically match height - common approaches are based, as always, on wrapper divs - have to add it*/{% endcomment %}
+/*TODO width here should automatically match height - common approaches are based, as always, on wrapper divs - have to add it*/
 .teamPhoto{
 	background: url(../images/team/temp_600x600.jpg) no-repeat center;
 	border-radius: 50%;
@@ -1239,7 +1237,7 @@
 
 /* END OF IMAGES */
 
-{% comment %}/* overridding bootstrap padding for smaller gaps in team subpage */{% endcomment %}
+/* overridding bootstrap padding for smaller gaps in team subpage */
 .row-team{
 	padding-top: 0 !important;
 }
@@ -1267,7 +1265,7 @@
 
 }
 
-{% comment %}/* TODO again px positioning here, it probably should be in em or % (or not at all) */{% endcomment %}
+/* TODO again px positioning here, it probably should be in em or % (or not at all) */
 .white-for-image-team {
 	height: 80%;
 	position: relative;
@@ -1291,7 +1289,7 @@
 	float: left;
 }
 
-{% comment %}/* TODO margin here is in %, em was problematic due to font-size change here - compare with portfolio em-based positioning on mobiles and select better */{% endcomment %}
+/* TODO margin here is in %, em was problematic due to font-size change here - compare with portfolio em-based positioning on mobiles and select better */
 .text-team-name {
 	margin: 5% 20% 5% 2%;
 	font-size: 1.4em;
@@ -1299,7 +1297,7 @@
 	line-height: 1.1em;
 }
 
-{% comment %}/* TODO margin as above*/{% endcomment %}
+/* TODO margin as above*/
 .text-team-position {
 	margin: 5% 20% 5% 2%;
 	font-size: 1em;
