@@ -1130,7 +1130,7 @@
 	background-color: WHITE;
 	height: 80%; /* TODO - UNEVEN COLOR-CUT IN PORTFOLIO AND TEAM - setting height to 100% and vertical centering would result in even color-cut (like in PDF - now its less wide in curved parts )*/
 	width: 60%;
-	border-radius: 2.5em;
+	border-radius: 1.6em;
 	z-index: 1;
 }
 
@@ -1140,7 +1140,7 @@
 	background-color: WHITE;
 	height: 80%;
 	width: 60%;
-	border-radius: 2.5em;
+	border-radius: 1.6em;
 	z-index: 1;
 	right: 20px;
 }
@@ -1254,7 +1254,7 @@
 	background-color: WHITE;
 	height: 80%;
 	width: 52%;
-	border-radius: 2.5em;
+	border-radius: 1.4em;
 	z-index: 1;
 	right: 20px;
 	border-left: 1px solid grey;
