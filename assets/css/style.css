@@ -1103,11 +1103,15 @@
 .imageTemp{
 	background: url(../images/redlogo.png) no-repeat center center;
 	background-size: 40%;
+	height:100%;
+	margin: auto;
 }
 
 .imageNiezbednik{
 	background: url(../images/niezbednikTEMP.png) no-repeat center center;
 	background-size: 70%;
+	height:100%;
+	margin: auto;
 }
 
 /* END OF IMAGES */
