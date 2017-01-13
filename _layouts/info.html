@@ -23,21 +23,16 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style-desktop.css" />
 	</noscript>
-	<!-- TODO FOUC - page flickers before is fully loaded - so called FOUC - common way to deal with it is a jQuery script -->
+	{% comment %}<!-- TODO FOUC - page flickers before is fully loaded - so called FOUC - common way to deal with it is a jQuery script -->{% endcomment %}
 </head>
 <body>
-
 	<!-- Header -->
-	<div id="header" style="padding: 0 0 91px 0"> <!-- TODO - temp hack, NOT FOR MOBILE - fast inlined override of div id=header padding, to exact nav bar height (for body font size 12pt; header left only for background image temporally -->
+	<div id="header" style="padding: 0 0 91px 0"> {% comment %}<!-- TODO - temp hack, NOT FOR MOBILE - fast inlined override of div id=header padding, to exact nav bar height (for body font size 12pt; header left only for background image temporally -->{% endcomment %}
 		{% include nav.html %}
 	</div>
 	<!-- Header -->
 	{{ content }}
-
-<!-- Footer -->
+	<!-- Footer -->
 	{% include footer.html %}
-
-<!-- Copyright -->
-
 </body>
 </html>

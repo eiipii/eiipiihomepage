@@ -1,3 +1,5 @@
+---
+---
 /*
 	Linear by TEMPLATED
     templated.co @templatedco
@@ -19,10 +21,11 @@
 		background: #161616;
 	}
 
+{% comment %}/*TODO style uses size in pt (original template), em (mainly) and sometimes in % - in the end this should be changed according to best practice approach (body font 100%, no px/pt, rest in em? didn't check it yet); AFTER HANDLING INLINED STYLES*/{% endcomment %}
 	body,input,textarea,select
 	{
 		font-family: 'Roboto', sans-serif;
-		font-size: 100%;  /*TODO style uses size in pt (original template), em (mainly) and sometimes in % - in the end this should be changed according to best practice approach (body font 100%, no px/pt, rest in em? didn't check it yet); AFTER HANDLING INLINED STYLES*/
+		font-size: 100%;
 		font-weight: 400;
 		line-height: 1.75em;
 		color: #777;
@@ -772,11 +775,11 @@
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
-
+{% comment %}/*<!-- TODO background, when uploading final image, check 1000px and mobile css -->*/{% endcomment %}
 	#header
 	{
 		position: relative;
-		background: url(../images/header.jpg) no-repeat top center; /*<!-- TODO when uploading final image, check 1000px and mobile css -->*/
+		background: url(../images/header.jpg) no-repeat top center;
 		background-attachment: fixed;
 		background-size: 110%;
 		text-align: center;
@@ -924,15 +927,15 @@
 		padding-bottom: 0.50em;
 	}
 
-
-	#sidebar /* TODO added this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
+{% comment %}/* TODO added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */{% endcomment %}
+	#sidebar
 	{
 		position: relative;
 		z-index: 5;
 	}
 
 
-	/* TODO - services style (used for services and portfolio) have a 1600 width in PDF and in style-desktop - have to define other style for mobile and small screens */
+	{% comment %}/* TODO - services style (used for services and portfolio) have a 1600 width in PDF and in style-desktop - have to define other style for mobile and small screens */{% endcomment %}
 
 	}
 	#services header{
@@ -1045,7 +1048,7 @@
 	}
 
 /*********************************************************************************/
-/* Content - used in services and portfolio
+/* Content - used in services and portfolio                                      */
 /*********************************************************************************/
 
 	#content{
@@ -1097,8 +1100,8 @@
 /* Graphic element from PDF project - color on right side, blue                  */
 /*********************************************************************************/
 
-/* ADDING IMAGES */
-/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */
+{% comment %}/* ADDING IMAGES */{% endcomment %}
+{% comment %}/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */{% endcomment %}
 
 .imageTemp{
 	background: url(../images/redlogo.png) no-repeat center center;
@@ -1122,13 +1125,15 @@
 	z-index: 0;
 }
 
-/* *-normal (text on right side) OR *-mirror (text on left side) */
+{% comment %}/* *-normal (text on right side) OR *-mirror (text on left side) */ {% endcomment %}
 
+{% comment %}/* TODO POSITIONING of color-cut-normal/mirror, white-white-for-image-normal/mirror & color-for-text-norma/mirror. possibly hack here - used relative position for white-left, float for right, and absolute for the rest, with some left/right properties; it worked, but it's definitely a chaotic, not clean approach. exactly the same case is in Team page. */{% endcomment %}
+{% comment %}/* TODO - SLIGHTLY UNEVEN COLOR-CUT ANGLE (compared to color-for-text border radius ratio) IN PORTFOLIO AND TEAM - it looks OK now, but it's not mathematically correct. Setting height of color-cut div bigger than the color-for-text div and vertical centering with same radius would result in better, but it messed with the box model, so I left it */{% endcomment %}
 .color-cut-normal {
 	display: inline;
-	position: absolute;  /* TODO hack here - using relative position for white-left and absolute for the rest resulted in proper position (bordered left side is inherited), but I expect some problems later*/
+	position: absolute;
 	background-color: WHITE;
-	height: 80%; /* TODO - UNEVEN COLOR-CUT IN PORTFOLIO AND TEAM - setting height to 100% and vertical centering would result in even color-cut (like in PDF - now its less wide in curved parts )*/
+	height: 80%;
 	width: 60%;
 	border-radius: 1.6em;
 	z-index: 1;
@@ -1154,7 +1159,7 @@
 	border: 1px solid grey;
 	z-index: 2;
 }
-
+{% comment %}/* about left: -10px; - see POSITIONGING. also, as all px positioning here, it probably should be in em or % (or not at all) */{% endcomment %}
 .white-for-image-mirror {
 	height: 80%;
 	position: relative;
@@ -1164,7 +1169,7 @@
 	border: 1px solid grey;
 	z-index: 2;
 	float: right;
-	left: -10px; /* TODO as all px positioning here, it probably should be in em or % (or not at all) */
+	left: -10px;
 }
 
 .color-for-text-normal {
@@ -1188,8 +1193,8 @@
 	float: left;
 }
 
+{% comment %}/* proper positioning achieved with em here, not sure if better solution - check mobile later*/{% endcomment %}
 .text-on-gradient-normal{
-	/* TODO proper positioning with margins with margins, not sure if better solution - check mobile later*/
 	margin: 1em 0 0 2em;
 	font-size: 1.8em;
 	font-weight: 600;
@@ -1197,8 +1202,8 @@
 	line-height: 1em;
 }
 
+{% comment %}/* as above */{% endcomment %}
 .text-on-gradient-mirror{
-	/* TODO proper positioning with margins with margins, not sure if better solution - check mobile later*/
 	margin: 1em 1.4em 0 0.6em;
 	font-size: 1.8em;
 	font-weight: 600;
@@ -1212,16 +1217,17 @@
 /*********************************************************************************/
 
 
-/* ADDING TEAM PHOTOS */
-/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */
-/* photos with 600x600 resolution should have background-size X to */
+{% comment %}/* ADDING TEAM PHOTOS */{% endcomment %}
+{% comment %}/* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */{% endcomment %}
+{% comment %}/* photos with 600x600 resolution should have background-size X to */{% endcomment %}
 
+{% comment %}/*TODO width here should automatically match height - common approaches are based, as always, on wrapper divs - have to add it*/{% endcomment %}
 .teamPhoto{
 	background: url(../images/team/temp_600x600.jpg) no-repeat center;
 	border-radius: 50%;
 	border: none;
 	height: 100%;
-	width: 74%; /*TODO width here should automatically match height - common approaches are based, as always, on wrapper divs - have to add it*/
+	width: 74%;
 	margin: auto;
 	background-size: 100%;
 }
@@ -1233,7 +1239,7 @@
 
 /* END OF IMAGES */
 
-
+{% comment %}/* overridding bootstrap padding for smaller gaps in team subpage */{% endcomment %}
 .row-team{
 	padding-top: 0 !important;
 }
@@ -1261,6 +1267,7 @@
 
 }
 
+{% comment %}/* TODO again px positioning here, it probably should be in em or % (or not at all) */{% endcomment %}
 .white-for-image-team {
 	height: 80%;
 	position: relative;
@@ -1269,7 +1276,7 @@
 	width: 52%;
 	z-index: 2;
 	float: right;
-	left: -5px; /* TODO as all px positioning here, it probably should be in em or % (or not at all) */
+	left: -5px;
 	background-color: #e6e6e6;
 }
 
@@ -1284,16 +1291,16 @@
 	float: left;
 }
 
+{% comment %}/* TODO margin here is in %, em was problematic due to font-size change here - compare with portfolio em-based positioning on mobiles and select better */{% endcomment %}
 .text-team-name {
-	/* TODO here positioning is in %, em was problematic - compare with portfolio em-based positioning on mobiles and select better */
 	margin: 5% 20% 5% 2%;
 	font-size: 1.4em;
 	font-weight: 500;
 	line-height: 1.1em;
 }
 
+{% comment %}/* TODO margin as above*/{% endcomment %}
 .text-team-position {
-	/* TODO proper positioning with margins with margins, not sure if better solution - check mobile later*/
 	margin: 5% 20% 5% 2%;
 	font-size: 1em;
 	font-weight: bold;

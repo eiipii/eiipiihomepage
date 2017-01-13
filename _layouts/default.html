@@ -23,18 +23,17 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style-desktop.css" />
 	</noscript>
-	<!-- TODO FOUC - page flickers before is fully loaded - so called FOUC - common way to deal with it is a jQuery script -->
+	{% comment %}<!-- TODO FOUC - 6page flickers before is fully loaded - so called FOUC - common way to deal with it is a jQuery script -->{% endcomment %}
 </head>
 <body>
-
 	<!-- Header -->
-	<div id="header"> <!-- TODO moved it to match logo/text position from PDF; style should be inlined after final changes here -->
+	<div id="header"> {% comment %}<!-- TODO moved it to match logo/text position from PDF; style should be inlined after final changes here -->{% endcomment %}
 		{% include nav.html %}
 		<div class="container">
 			<!-- Logo -->
 			<div id="logo">
 				<p id="eiipii_logo_border"></p>
-				<span class="tag"> <!-- TODO I'm quite sure this ("Developing with skills" sizes and div header margins) is done in poor style - have to check it later on mobiles -->
+				<span class="tag"> {% comment %}<!-- TODO I'm quite sure this ("Developing with skills" sizes and div header margins) is done in poor style - have to check it later on mobiles -->{% endcomment %}
 					<p style="font-size: 220%; margin: 1em 0 0.5em">Developing</p>
 					<p style="font-size: 150%; margin: 0">knowledge and skills with passion</p>
 				</span>
@@ -43,26 +42,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 	</div>
 	<!-- Header -->
 	{{ content }}
-	<!-- Tweet -->
-	<!--<div id="tweet">-->
-		<!--<div class="container">-->
-			<!--<section>-->
-				<!--<blockquote>probably not needed?</blockquote>-->
-			<!--</section>-->
-		<!--</div>-->
-	<!--</div>-->
-
-
-<!-- Footer -->
+	<!-- Footer -->
 	{% include footer.html %}
-
-<!-- Copyright
-<div id="copyright">
-	<div class="container">
-		Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
-		Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a>
-	</div>
-</div> -->
-
 </body>
 </html>
