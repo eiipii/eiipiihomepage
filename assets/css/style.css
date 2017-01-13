@@ -19,7 +19,10 @@
 		background: #161616;
 	}
 
-/*TODO style uses size in pt (original template), em (mainly) and sometimes in % - in the end this should be changed according to best practice approach (body font 100%, no px/pt, rest in em? didn't check it yet); AFTER HANDLING INLINED STYLES*/
+/*TODO - AT THE END - Main font size: style uses size in pt (original template), em (mainly) and sometimes in %
+ - in the end this should be changed according to best practice approach
+ (body font 100%, no px/pt, rest in em? didn't check it yet);
+ keep in mind that there probably too many text classes, probably not a best practice */
 	body,input,textarea,select
 	{
 		font-family: 'Roboto', sans-serif;
@@ -109,6 +112,7 @@
 	
 		header h2
 		{
+			font-size: 3.6rem
 		}
 
 		header .byline
@@ -774,7 +778,7 @@
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
-/*<!-- TODO background, when uploading final image, check 1000px and mobile css -->*/
+/* TODO - AT THE END - Final background image, when uploading final image, check 1000px and mobile css*/
 	#header
 	{
 		position: relative;
@@ -795,8 +799,14 @@
 		background: rgba(64,64,64,0.125);
 	}
 
+	/*h2 style for Featured*/
+
+	.h2Featured {
+		font-size: 3.6rem
+	}
+
 /*********************************************************************************/
-/* Logo & Frontpage Custom Icons                                                 */
+/* Logo & and text under the logo, custom lines                                  */
 /*********************************************************************************/
 
 	#logo
@@ -829,16 +839,32 @@
 		}
 
 		#eiipii_logo {
-			background: url(../images/eiipii_logo.png) no-repeat center;
-			width: 100%;
-			height: 90px;
-		}
-
-		#eiipii_logo_border {
 			background: url(../images/eiipii_logo_borderPDF3.png) no-repeat center;
 			width: 100%;
 			height: 156px;
 		}
+
+		/*TODO - MOBILE - Logo and text under it (Developing knowledge and skills) - have to check it*/
+
+		#logo p.firstLine {
+
+			font-size: 220%;
+			margin: 1em 0 0.5em
+
+		}
+
+		#logo p.secondLine {
+
+			font-size: 150%;
+			margin: 0;
+
+		}
+
+
+/*********************************************************************************/
+/* Frontpage Custom Icons                                                        */
+/*********************************************************************************/
+
 
 	.iconDevelopment {
 		background: url(../images/development.png) no-repeat center;
@@ -947,7 +973,7 @@
 		padding-bottom: 0.50em;
 	}
 
-/* TODO added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
+	/* added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
 	#sidebar
 	{
 		position: relative;
@@ -955,7 +981,9 @@
 	}
 
 
-	/* TODO - services style (used for services and portfolio) have a 1600 width in PDF and in style-desktop - have to define other style for mobile and small screens */
+	/* TODO - MOBILE - Services style (used for services and portfolio) for MOBILE.
+	They have a 1600px width in PDF and in style-desktop.css, line 70
+	- have to define other style for mobile and small screens, or try how it behaves with bootstrap defaults. */
 
 	}
 	#services header{
@@ -1075,6 +1103,11 @@
 		font-size: 160%;
 	}
 
+	hr.portfolio, hr.services{
+		margin: 2em 0 0 0;
+		padding: 1em 0 0 0;
+	}
+
 
 /*********************************************************************************/
 /* Tweet                                                                         */
@@ -1151,8 +1184,15 @@
 
 /* *-normal (text on right side) OR *-mirror (text on left side) */ 
 
-/* TODO POSITIONING of color-cut-normal/mirror, white-white-for-image-normal/mirror & color-for-text-norma/mirror. possibly hack here - used relative position for white-left, float for right, and absolute for the rest, with some left/right properties; it worked, but it's definitely a chaotic, not clean approach. exactly the same case is in Team page. */
-/* TODO - SLIGHTLY UNEVEN COLOR-CUT ANGLE (compared to color-for-text border radius ratio) IN PORTFOLIO AND TEAM - it looks OK now, but it's not mathematically correct. Setting height of color-cut div bigger than the color-for-text div and vertical centering with same radius would result in better, but it messed with the box model, so I left it */
+/* TODO - HUGE HACK (probably) - Regarding all graphic objects (text+icon with gradient). Positioning of color-cut-normal/mirror, white-white-for-image-normal/mirror & color-for-text-norma/mirror.
+ Possibly hack here - used relative position for white-left, float for right, and absolute for the rest, with some left/right properties.
+ It worked, but it's definitely a chaotic, not clean approach. exactly the same case is in Team page. */
+
+/* TODO - SMALL ISSUE - Slightly uneven cuts/rounded edges of color-cut div (compared to color-for-text border radius ratio).
+ In portfolio page and team page. It looks OK now, but it's not mathematically correct.
+ Setting height of color-cut div bigger than the color-for-text div and vertical centering
+ with same radius would result in better, but it messed with the box model, so I left it */
+
 .color-cut-normal {
 	display: inline;
 	position: absolute;
@@ -1237,15 +1277,28 @@
 
 
 /*********************************************************************************/
-/* Portfolio objects - slightly changed from above, left-side-text only          */
+/* Team objects - slightly changed from above, left-side-text only          */
 /*********************************************************************************/
+
+	h1.team {
+		font-size: 2em;
+		font-weight: 600;
+		margin: 0 0 2rem;
+	}
+
+	h2.team {
+	}
 
 
 /* ADDING TEAM PHOTOS */
 /* images in bordered element are added by adding new stale with proper asset URL, based on .imageTemp */
 /* photos with 600x600 resolution should have background-size X to */
 
-/*TODO width here should automatically match height - common approaches are based, as always, on wrapper divs - have to add it*/
+/*TODO - HACK - Width here should automatically match height.
+It doesn't now, so on some strange RWD resolutions it may not be a circle.
+Common solutions are based, as always, on wrapper divs- tried some SO solutions, but they introduced box-model problems.
+Left it for now. */
+
 .teamPhoto{
 	background: url(../images/team/temp_600x600.jpg) no-repeat center;
 	border-radius: 50%;
@@ -1291,7 +1344,7 @@
 
 }
 
-/* TODO again px positioning here, it probably should be in em or % (or not at all) */
+/* TODO - NOT RWD SAFE (probably) - again px positioning here, it probably should be in em or % (or not at all) */
 .white-for-image-team {
 	height: 80%;
 	position: relative;
@@ -1315,7 +1368,8 @@
 	float: left;
 }
 
-/* TODO margin here is in %, em was problematic due to font-size change here - compare with portfolio em-based positioning on mobiles and select better */
+/* TODO - AT THE END - Margin here is in %, em was problematic due to font-size change here.
+Compare with portfolio em-based positioning on mobiles and select better, or decide that both are OK. */
 .text-team-name {
 	margin: 5% 20% 5% 2%;
 	font-size: 1.4em;
@@ -1323,7 +1377,7 @@
 	line-height: 1.1em;
 }
 
-/* TODO margin as above*/
+/* as above*/
 .text-team-position {
 	margin: 5% 20% 5% 2%;
 	font-size: 1em;

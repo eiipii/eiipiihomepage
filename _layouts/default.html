@@ -23,19 +23,20 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style-desktop.css" />
 	</noscript>
-	{% comment %}<!-- TODO FOUC - 6page flickers before is fully loaded - so called FOUC - common way to deal with it is a jQuery script -->{% endcomment %}
+	{% comment %}<!-- TODO - FOUC - 6page flickers before is fully loaded
+	- so called FOUC - common way to deal with it is a jQuery script -->{% endcomment %}
 </head>
 <body>
 	<!-- Header -->
-	<div id="header"> {% comment %}<!-- TODO moved it to match logo/text position from PDF; style should be inlined after final changes here -->{% endcomment %}
+	<div id="header">
 		{% include nav.html %}
 		<div class="container">
 			<!-- Logo -->
 			<div id="logo">
-				<p id="eiipii_logo_border"></p>
-				<span class="tag"> {% comment %}<!-- TODO I'm quite sure this ("Developing with skills" sizes and div header margins) is done in poor style - have to check it later on mobiles -->{% endcomment %}
-					<p style="font-size: 220%; margin: 1em 0 0.5em">Developing</p>
-					<p style="font-size: 150%; margin: 0">knowledge and skills with passion</p>
+				<p id="eiipii_logo"></p>
+				<span class="tag">
+					<p class="firstLine">Developing</p>
+					<p class="secondLine">knowledge and skills with passion</p>
 				</span>
 			</div>
 		</div>
