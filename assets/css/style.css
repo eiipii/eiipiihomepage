@@ -1068,8 +1068,10 @@
 
 	}
 
-	#featured2 h3
+	#featured2 h3,
+	#featured2 p
 	{
+		text-align: center;
 	}
 
 	#featured2 .pennant
