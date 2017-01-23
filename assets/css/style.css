@@ -16,7 +16,6 @@
 	{
 		margin: 0;
 		padding: 0;
-		background: #161616;
 	}
 
 	body,input,textarea,select
@@ -1004,7 +1003,7 @@
 	
 	#footer header .byline
 	{
-		color: rgba(255,255,255,.2);
+		color: #8a6d3b;
 	}
 
 /*********************************************************************************/
@@ -1365,6 +1364,10 @@
 	background-size: 250px 200px;
 }
 .team-kierysz {
+	background: url(../images/team/temp_300.jpg) no-repeat center;
+	background-size: 250px 200px;
+}
+.team-pietrzkowski {
 	background: url(../images/team/temp_300.jpg) no-repeat center;
 	background-size: 250px 200px;
 }
