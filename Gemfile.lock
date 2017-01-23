@@ -202,8 +202,5 @@ DEPENDENCIES
   github-pages
   therubyracer
 
-RUBY VERSION
-   ruby 2.1.9p490
-
 BUNDLED WITH
    1.13.7
