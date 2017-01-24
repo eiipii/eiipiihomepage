@@ -947,6 +947,7 @@
 
 	#main
 	{
+		padding: 6em 0em;
 		position: relative;
 		background: #fff;
 	}
@@ -1294,6 +1295,7 @@
 .total-height-team {
 	height: 13em;
 	z-index: 0;
+	width: 100%;
 }
 
 .total-height-team-right {
