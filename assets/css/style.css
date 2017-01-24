@@ -1144,26 +1144,26 @@
 .imageBigdata{
 	background: url(../images/bigdata.png) no-repeat center center;
 	height:100%;
-	background-size: 600px 160px;
+	/*background-size: 600px 160px;*/
 }
 
 .imageNiezbednik{
 	background: url(../images/niezbednik.png) no-repeat center center;
 	height:100%;
-	background-size: 600px 160px;
+/*	background-size: 600px 160px;*/
 }
 
 .imageFootball{
 	background: url(../images/football.png) no-repeat center center;
 	height:100%;
-	background-size: 600px 160px;
+/*	background-size: 600px 160px;*/
 }
 
 /* END OF IMAGES */
 
 
 .total-height {
-	height: 14em;
+	height: 18rem;
 	z-index: 0;
 }
 
@@ -1254,7 +1254,7 @@
 
 /* as above */
 .text-on-gradient-mirror{
-	margin: 1em 1.4em 0 0.6em;
+	margin: 1em 3em 0 0.6em;
 	font-size: 1.8em;
 	font-weight: 600;
 	color: white;
@@ -1328,48 +1328,51 @@
 	background-color: #e6e6e6;
 }
 .white-for-image-team .image-team-around {
-	width: 80%;
+	height: 100%;
+	width: auto;
+	/* TODO added height 100% and width auto instead of commented lines - it should properly center the photos in parent div. */
+	/*	width: 80%;
 	height: 94%;
 	margin-left: 10%;
-	margin-top: 2%;
+	margin-top: 2%;*/
 	display: block;
-	border-radius: 80px;
+	border-radius: 100px; /* TODO no idea why border radious 100px (or 50%) doesn't give perfectly circular image - it was circular before, can't find which div breaks it, and how */
 }
 .team-marek-janiec {
-	background: url(../images/team/250x200/MAREK.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/MAREK.jpg) no-repeat center;
+	background-size: 200px 200px;
 }
 .team-matamoros {
-	background: url(../images/team/250x200/ANTONIO.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/ANTONIO.jpg) no-repeat center;
+	/*background-size: 200px 200px;*/
 }
 .team-szklarz {
-	background: url(../images/team/250x200/PAWEL.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/PAWEL.jpg) no-repeat center;
+	background-size: 200px 200px;
 }
 .team-gora {
-	background: url(../images/team/250x200/MICHAL.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/MICHAL.jpg) no-repeat center;
+	background-size: 200px 200px;
 }
 .team-janiec {
-	background: url(../images/team/250x200/MARIA.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/MARIA.jpg) no-repeat center;
+	background-size: 200px 200px;
 }
 .team-kurman {
-	background: url(../images/team/250x200/OLGA.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/OLGA.jpg) no-repeat center;
+	background-size: 200px 200px;
 }
 .team-bednarczyk {
 	background: url(../images/team/temp_300.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background-size: 200px 200px;
 }
 .team-kierysz {
 	background: url(../images/team/temp_300.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background-size: 200px 200px;
 }
 .team-pietrzkowski {
-	background: url(../images/team/250x200/GABRIEL.jpg) no-repeat center;
-	background-size: 250px 200px;
+	background: url(../images/team/200x200/GABRIEL.jpg) no-repeat center;
+	background-size: 200px 200px;
 }
 
 
