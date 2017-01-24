@@ -1275,24 +1275,36 @@
 	h2.team {
 	}
 
+	/* TODO problem with circular border in TEAM
+	it used to work in commit 08b47f6ce24a297e79d6b9aa13985b89db694f85
+	now it looks like that:
+	A when team photo is called by <div class="image-team-around team-kierysz"></div> border-radius won't work,
+	A in that case the border is drawn around the whole div dimensions, not on 200x200x background picture called by team-kierysz (we try to call border-radius twice on the same div)
+		OR
+	B when the team photo is called by <div class="white-for-image-team"><figure class="teamPhoto team-matamoros"></figure></div>
+	B the border-radius works correctly on every object, but in that case I can't center the photo in the parent div.
+
+	white-for-image-team and image-team-around share atributes and are similar, but I can't find what moves the nested object to the right
+	*/
+
+
+
 .teamPhoto{
-	background: url(../images/team/temp_600x600.jpg) no-repeat center;
-	border-radius: 50%;
-	border: none;
 	height: 100%;
-	width: 74%;
-	margin: auto;
-	background-size: 100%;
+	width: auto;
+	display: block;
+	/* !* TODO added height 100% and width auto instead of commented lines - it should properly center the photos in parent div. *!
+	!*	width: 80%;
+	height: 94%;
+	margin-left: 10%;
+	margin-top: 2%;*!
+	display: block;*/
 }
 
-
-/* END OF IMAGES */
 
 /* overridding bootstrap padding for smaller gaps in team subpage */
 .row-team {
-
 }
-
 
 .total-height-team {
 	height: 13em;
@@ -1335,8 +1347,7 @@
 	height: 94%;
 	margin-left: 10%;
 	margin-top: 2%;*/
-	display: block;
-	border-radius: 100px; /* TODO no idea why border radious 100px (or 50%) doesn't give perfectly circular image - it was circular before, can't find which div breaks it, and how */
+
 }
 .team-marek-janiec {
 	background: url(../images/team/200x200/MAREK.jpg) no-repeat center;
@@ -1344,7 +1355,11 @@
 }
 .team-matamoros {
 	background: url(../images/team/200x200/ANTONIO.jpg) no-repeat center;
-	/*background-size: 200px 200px;*/
+	background-size: 200px 200px;
+	border: none;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;;
 }
 .team-szklarz {
 	background: url(../images/team/200x200/PAWEL.jpg) no-repeat center;
@@ -1373,6 +1388,7 @@
 .team-pietrzkowski {
 	background: url(../images/team/200x200/GABRIEL.jpg) no-repeat center;
 	background-size: 200px 200px;
+	border-radius: 100px;
 }
 
 
