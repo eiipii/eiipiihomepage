@@ -58,7 +58,7 @@
 	a
 	{
 		text-decoration: none;
-		color: #80BA8E;
+		color: #7B9AA7;
 	}
 	
 	a:hover
@@ -143,6 +143,10 @@
 		section.portfolio
 		{
 			margin-bottom: 2em;
+		}
+
+		.techstack , .techstack b{
+			color:#0071BC;
 		}
 		
 		section > :last-child,
@@ -965,6 +969,7 @@
 	{
 		display: block;
 		padding-bottom: 0.50em;
+		color: #7B9AA7;
 	}
 
 	/* added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
@@ -1004,7 +1009,7 @@
 	
 	#footer header .byline
 	{
-		color: #8a6d3b;
+		color: #0075ef;
 	}
 
 /*********************************************************************************/
@@ -1259,7 +1264,7 @@
 	font-size: 1.8em;
 	font-weight: 600;
 	color: white;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 
@@ -1311,7 +1316,7 @@
 	border-radius: 30px;
 	z-index: 1;
 	right: 20px;
-	border-left: 1px solid grey;
+	border-left: 1px solid #E6E6E6;
 
 }
 
@@ -1379,7 +1384,7 @@
 
 .color-for-text-team {
 	background-color: white;
-	border: 1px solid grey;
+	border: 1px solid #E6E6E6;
 	z-index: 0;
 	display: inline;
 	position: absolute;
@@ -1392,8 +1397,8 @@
 Compare with portfolio em-based positioning on mobiles and select better, or decide that both are OK. */
 .text-team-name {
 	margin: 5% 20% 5% 2%;
-	font-size: 1.4em;
-	font-weight: 500;
+	font-size: 2.4em;
+	font-weight: 200;
 	line-height: 1.1em;
 }
 
@@ -1420,10 +1425,10 @@ Compare with portfolio em-based positioning on mobiles and select better, or dec
 }
 .niezGrad {
 	 background: #754C24;
-	 background: -webkit-linear-gradient(left top, #9F754B, #754C24); /* For Safari 5.1 to 6.0 */
-	 background: -o-linear-gradient(bottom right, #9F754B, #754C24); /* For Opera 11.1 to 12.0 */
-	 background: -moz-linear-gradient(bottom right, #9F754B, #754C24); /* For Firefox 3.6 to 15 */
-	 background: linear-gradient(to bottom right, #9F754B, #754C24); /* Standard syntax */
+	 background: -webkit-linear-gradient(left top, #9F754B, #4c2600); /* For Safari 5.1 to 6.0 */
+	 background: -o-linear-gradient(bottom right, #9F754B, #4c2600); /* For Opera 11.1 to 12.0 */
+	 background: -moz-linear-gradient(bottom right, #9F754B, #4c2600); /* For Firefox 3.6 to 15 */
+	 background: linear-gradient(to bottom right, #9F754B, #4c2600); /* Standard syntax */
 }
 
 .greenGrad {
