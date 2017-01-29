@@ -24,13 +24,13 @@
 		font-size: 11pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #777;
+		color: #2f2a2a;
 	}
 
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 300;
-		color: #777;
+		color: #2f2a2a;
 	}
 	
 		h2
@@ -767,7 +767,7 @@
 	
 	ul.contact li a:hover
 	{
-		color: #fff;
+		color: #6495ed;
 	}
 
 /*********************************************************************************/
@@ -1412,19 +1412,26 @@ Compare with portfolio em-based positioning on mobiles and select better, or dec
 /*********************************************************************************/
 
 .blueGrad {
-	background: blue; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, dodgerblue, darkblue); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, dodgerblue, darkblue); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, dodgerblue, darkblue); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, dodgerblue, darkblue); /* Standard syntax */
+	background: #0071BC; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #24A4DD, #0071BC); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #24A4DD, #0071BC); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #24A4DD, #0071BC); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #24A4DD, #0071BC); /* Standard syntax */
+}
+.niezGrad {
+	 background: #754C24;
+	 background: -webkit-linear-gradient(left top, #9F754B, #754C24); /* For Safari 5.1 to 6.0 */
+	 background: -o-linear-gradient(bottom right, #9F754B, #754C24); /* For Opera 11.1 to 12.0 */
+	 background: -moz-linear-gradient(bottom right, #9F754B, #754C24); /* For Firefox 3.6 to 15 */
+	 background: linear-gradient(to bottom right, #9F754B, #754C24); /* Standard syntax */
 }
 
 .greenGrad {
-	background: green; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, greenyellow, darkgreen); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, greenyellow, darkgreen); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, greenyellow, darkgreen); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, greenyellow, darkgreen); /* Standard syntax */
+	background: #006837; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #30A847, #006837); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #30A847, #006837); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #30A847, #006837); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #30A847, #006837); /* Standard syntax */
 }
 
 .redGrad {
