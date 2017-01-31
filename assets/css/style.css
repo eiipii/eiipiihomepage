@@ -24,13 +24,13 @@
 		font-size: 11pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #777;
+		color: #666;
 	}
 
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 300;
-		color: #777;
+		color: #666;
 	}
 	
 		h2
@@ -115,6 +115,7 @@
 			display: block;
 			margin: 1.5em 0 0 0;
 			padding: 0 0 0.5em 0;
+			color: white;
 		}
 		
 	footer
@@ -796,7 +797,8 @@
 	/*h2 style for Featured*/
 
 	.h2Featured {
-		font-size: 3.6rem
+		font-size: 3.6em;
+		color: white;
 	}
 
 /*********************************************************************************/
@@ -975,13 +977,12 @@
 	}
 
 
-	/* TODO - MOBILE - Services style (used for services and portfolio) for MOBILE.
-	They have a 1600px width in PDF and in style-desktop.css, line 70
-	- have to define other style for mobile and small screens, or try how it behaves with bootstrap defaults. */
-
-
-	#services header{
+	#services header {
 		padding-top: 15px;
+	}
+
+	#services header h2 {
+		color: #4178BD !important;
 	}
 
 	#serviceReference{
@@ -1039,7 +1040,7 @@
 	#featured
 	{
 		position: relative;
-		background: #ffff00;
+		background: #7B9AA7;
 		text-align: center;
 	}
 	
@@ -1339,27 +1340,27 @@
 	border-radius: 100px;
 }
 .team-marek-janiec {
-	background: url(../images/team/200x200/MAREK.jpg) no-repeat center;
+	background: url(../images/team/200x200/MAREK.png) no-repeat center;
 	background-size: 200px 200px;
 }
 .team-matamoros {
-	background: url(../images/team/200x200/ANTONIO.jpg) no-repeat center;
+	background: url(../images/team/200x200/ANTONIO.png) no-repeat center;
 	background-size: 200px 200px;
 }
 .team-szklarz {
-	background: url(../images/team/200x200/PAWEL.jpg) no-repeat center;
+	background: url(../images/team/200x200/Pawel.png) no-repeat center;
 	background-size: 200px 200px;
 }
 .team-gora {
-	background: url(../images/team/200x200/MICHAL.jpg) no-repeat center;
+	background: url(../images/team/200x200/MICHAL.png) no-repeat center;
 	background-size: 200px 200px;
 }
 .team-janiec {
-	background: url(../images/team/200x200/MARIA.jpg) no-repeat center;
+	background: url(../images/team/200x200/MARYSIA.png) no-repeat center;
 	background-size: 200px 200px;
 }
 .team-kurman {
-	background: url(../images/team/200x200/OLGA.jpg) no-repeat center;
+	background: url(../images/team/200x200/OLGA.png) no-repeat center;
 	background-size: 200px 200px;
 }
 .team-bednarczyk {
@@ -1371,7 +1372,7 @@
 	background-size: 200px 200px;
 }
 .team-pietrzkowski {
-	background: url(../images/team/200x200/GABRIEL.jpg) no-repeat center;
+	background: url(../images/team/200x200/GABRIEL.png) no-repeat center;
 	background-size: 200px 200px;
 	border-radius: 100px;
 }
