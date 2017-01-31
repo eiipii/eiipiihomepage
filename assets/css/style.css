@@ -24,13 +24,13 @@
 		font-size: 11pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #666;
+		color: #2f2a2a;
 	}
 
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 300;
-		color: #666;
+		color: #2f2a2a;
 	}
 	
 		h2
@@ -58,7 +58,7 @@
 	a
 	{
 		text-decoration: none;
-		color: #80BA8E;
+		color: #7B9AA7;
 	}
 	
 	a:hover
@@ -144,6 +144,10 @@
 		section.portfolio
 		{
 			margin-bottom: 2em;
+		}
+
+		.techstack , .techstack b{
+			color:#0071BC;
 		}
 		
 		section > :last-child,
@@ -768,7 +772,7 @@
 	
 	ul.contact li a:hover
 	{
-		color: #fff;
+		color: #6495ed;
 	}
 
 /*********************************************************************************/
@@ -967,6 +971,7 @@
 	{
 		display: block;
 		padding-bottom: 0.50em;
+		color: #7B9AA7;
 	}
 
 	/* added z-index here this to ensure that sidebar elements are on top of graphic element backgrounds - not sure if won't mess RWD */
@@ -1005,7 +1010,7 @@
 	
 	#footer header .byline
 	{
-		color: #8a6d3b;
+		color: #0075ef;
 	}
 
 /*********************************************************************************/
@@ -1260,7 +1265,7 @@
 	font-size: 1.8em;
 	font-weight: 600;
 	color: white;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 
@@ -1312,7 +1317,7 @@
 	border-radius: 30px;
 	z-index: 1;
 	right: 20px;
-	border-left: 1px solid grey;
+	border-left: 1px solid #E6E6E6;
 
 }
 
@@ -1380,7 +1385,7 @@
 
 .color-for-text-team {
 	background-color: white;
-	border: 1px solid grey;
+	border: 1px solid #E6E6E6;
 	z-index: 0;
 	display: inline;
 	position: absolute;
@@ -1393,8 +1398,8 @@
 Compare with portfolio em-based positioning on mobiles and select better, or decide that both are OK. */
 .text-team-name {
 	margin: 5% 20% 5% 2%;
-	font-size: 1.4em;
-	font-weight: 500;
+	font-size: 2.4em;
+	font-weight: 200;
 	line-height: 1.1em;
 }
 
@@ -1413,19 +1418,26 @@ Compare with portfolio em-based positioning on mobiles and select better, or dec
 /*********************************************************************************/
 
 .blueGrad {
-	background: blue; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, dodgerblue, darkblue); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, dodgerblue, darkblue); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, dodgerblue, darkblue); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, dodgerblue, darkblue); /* Standard syntax */
+	background: #0071BC; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #24A4DD, #0071BC); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #24A4DD, #0071BC); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #24A4DD, #0071BC); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #24A4DD, #0071BC); /* Standard syntax */
+}
+.niezGrad {
+	 background: #754C24;
+	 background: -webkit-linear-gradient(left top, #9F754B, #4c2600); /* For Safari 5.1 to 6.0 */
+	 background: -o-linear-gradient(bottom right, #9F754B, #4c2600); /* For Opera 11.1 to 12.0 */
+	 background: -moz-linear-gradient(bottom right, #9F754B, #4c2600); /* For Firefox 3.6 to 15 */
+	 background: linear-gradient(to bottom right, #9F754B, #4c2600); /* Standard syntax */
 }
 
 .greenGrad {
-	background: green; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, greenyellow, darkgreen); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, greenyellow, darkgreen); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, greenyellow, darkgreen); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, greenyellow, darkgreen); /* Standard syntax */
+	background: #006837; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #30A847, #006837); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #30A847, #006837); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #30A847, #006837); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #30A847, #006837); /* Standard syntax */
 }
 
 .redGrad {
