@@ -1,16 +1,26 @@
-<div id="nav-wrapper">
-	<!-- Nav -->
-	<nav id="nav">
-		<ul>
-			{% assign current = page.url | downcase | split: '/' %}
-			<li {% if current[1] == 'index.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/index.html">EiiPii</a></li>
-			{% comment %}<!--<li {% if current[1] == 'blog' %}class='current'{% endif %}><a href="{{ site.baseurl }}/blog">Blog</a></li>-->{% endcomment %}
-			<li {% if current[1] == 'services.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/services.html">Services</a></li>
-			<li {% if current[1] == 'services.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/team.html">Team</a></li>
-			<li {% if current[1] == 'services.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/portfolio.html">Portfolio</a></li>
-			<li {% if current[1] == 'services.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
-			{% comment %}<!--<li {% if current[1] == 'left-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/left-sidebar.html">Left Sidebar Template (for more info?)</a></li>-->
-			<!--<li {% if current[1] == 'no-sidebar.html' %}class='current'{% endif %}><a href="{{ site.baseurl }}/no-sidebar.html">No Sidebar Template (for more info?)</a></li>-->{% endcomment %}
-		</ul>
-	</nav>
-</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">EiiPii</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="page-scroll" href="#home">EiiPii</a></li>
+                <li><a class="page-scroll" href="#service">Services</a></li>
+                <li><a class="page-scroll" href="#team">Team</a></li>
+                <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
+                <li><a class="page-scroll" href="#contact">Contact</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
