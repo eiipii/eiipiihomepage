@@ -34,9 +34,11 @@ html {
   height: 100%;
   padding-top: 150px;
   text-align: center;
-  background: green;
 }
 
+.service-section , .portfolio-section {
+  background: green;
+}
 .home-section , .team-section , .contact-section {
   background: blue;
 }
