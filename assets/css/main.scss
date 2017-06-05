@@ -1,32 +1,16 @@
 ---
 ---
 
+@import "colors";
 @import "typography";
-
-$color-navbar: #1884c9;
-$color-navbar-collapsed: #FFFFFF;
-
-$color-home-bg: #0071BC;
-$color-home2-bg: #f3f3f3;
-$color-services-bg: #FFFFFF;
-$color-team-bg: #f3f3f3;
-$color-team-square: #e6e6e6;
-$color-portfolio-bg: #ffffff; // TODO pattern
-$color-contact-bg: #f3f3f3;
-
-$color-stripe-bg: #f9f9f9;
-
-$color-bright: #ffffff;
-$color-bright-txt: #ffffff;
-$color-bright-txt-detail: #78D1FF;
-
-$color-shadow: #ebebeb;
-$color-dark-txt: #666666;
-$color-dark-txt-detail: #78D1FF;
 
 .content {
   width: 80%;
   margin: 0 auto;
+}
+
+section {
+  height: 100vh;
 }
 
 .navbar { // TODO right side text-menu is not centered vertically - don't know why, since parent div is, and navbar doesnt have margin/padding
