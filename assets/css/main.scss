@@ -2,7 +2,149 @@
 ---
 @import "typography";
 
+$color-navbar: #1884c9;
+$color-navbar-collapsed: #FFFFFF;
+
+$color-home-bg: #0071BC;
+$color-home2-bg: #f3f3f3;
+$color-services-bg: #FFFFFF;
+$color-team-bg: #f3f3f3;
+$color-team-square: #e6e6e6;
+$color-portfolio-bg: #ffffff; // TODO pattern
+$color-contact-bg: #f3f3f3;
+
+$color-stripe-bg: #f9f9f9;
+
+
+$color-bright: #ffffff;
+$color-bright-txt: #ffffff;
+$color-bright-txt-detail: #78D1FF;
+
+$color-shadow: #ebebeb;
+$color-dark-txt: #666666;
+$color-dark-txt-detail: #78D1FF;
+
+
+
+
 .content {
   width: 80%;
   margin: 0 auto;
+}
+
+.navbar {
+  background: $color-navbar;
+  border: none;
+}
+
+.navbar-brand {
+  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
+}
+
+.top-nav-collapse {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
+
+  background: $color-navbar-collapsed;
+  box-shadow: 0 2px 20px 1px $color-shadow; // TODO on collapse, transmission between no shadow and shadow is ugly
+}
+
+.home-section {
+  background: $color-home-bg;
+  padding-top: 150px; // for navbar (was inherited)
+  padding-bottom: 60px;
+
+  text-align: left;
+}
+
+.home2-section {
+  background: $color-home2-bg;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  text-align: left;
+}
+.service-section {
+  background: repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);
+
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  text-align: left;
+}
+
+.team-section {
+  background: $color-team-bg;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  text-align: left;
+
+}
+
+.portfolio-section {
+  background: repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);
+
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  text-align: left;
+
+}
+
+.portfolio-tech-stack {
+  padding-left: 0;
+  list-style: none;
+  font-weight: bold;
+  color: $color-bright-txt-detail;
+}
+
+.contact-section {
+  background: $color-contact-bg;
+  padding-top: 50px;
+  padding-bottom: 60px;
+
+  text-align: left;
+
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blue-section-title {
+
+  margin-bottom: 40px;
+
+  color: $color-bright-txt-detail;
+
+  border-bottom: 10px solid $color-bright-txt-detail;
+}
+
+.blue-text {
+  color: $color-bright-txt-detail;
+}
+
+.team-square {
+  background: $color-team-square;
+
+}
+
+.team-text-div {
+  margin: 10px;
+}
+
+.team-text-name {
+  text-align: center;
+  margin-bottom: 0;
+
+}
+
+.team-text-position {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+
 }
