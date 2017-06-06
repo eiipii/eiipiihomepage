@@ -1,0 +1,41 @@
+
+
+.navbar { // TODO right side text-menu is not centered vertically - don't know why, since parent div is, and navbar doesnt have margin/padding
+  background: $color-navbar;
+  border: none;
+  color: $color-bright-txt; // TODO - problem with nav text color (should be $color-bright-text normally and $color-dark-txt when collapsed - doesn't work yet
+}
+
+.navbar-nav {
+}
+
+.navbar-brand {
+  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
+}
+
+.top-nav-collapse {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
+  color: $color-dark-txt; // TODO - problem with nav text color (should be $color-bright-text normally and $color-dark-txt when collapsed - doesn't work yet
+
+  box-shadow: 0 2px 20px 1px $color-shadow; // TODO on collapse, transmission between no shadow and shadow is ugly
+  background: $color-navbar-collapsed;
+  .navbar-nav > li > a {
+    color: $color-main-blue;
+  }
+}
+
+
+@media(min-width: 767px) {
+  .navbar {
+    padding: 20px 0;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+  }
+
+  .top-nav-collapse {
+    padding: 0;
+  }
+}

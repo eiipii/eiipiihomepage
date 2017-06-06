@@ -2,92 +2,52 @@
 ---
 
 @import "colors";
-@import "typography";
+@import "layout";
+@import "navbar";
 
-.content {
-  width: 80%;
-  margin: 0 auto;
+
+.home-section , .introduction-section, .service-section , .team-section , .portfolio-section , .contact-section {
 }
-
-section {
-  height: 100vh;
+.service-section , .portfolio-section {
+  background: green;
 }
-
-.navbar { // TODO right side text-menu is not centered vertically - don't know why, since parent div is, and navbar doesnt have margin/padding
-  background: $color-navbar;
-  border: none;
-  color: $color-bright-txt; // TODO - problem with nav text color (should be $color-bright-text normally and $color-dark-txt when collapsed - doesn't work yet
-}
-
-.navbar-nav {
-}
-
-.navbar-brand {
-  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
-}
-
-.top-nav-collapse {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
-  color: $color-dark-txt; // TODO - problem with nav text color (should be $color-bright-text normally and $color-dark-txt when collapsed - doesn't work yet
-
-  background: $color-navbar-collapsed;
-  box-shadow: 0 2px 20px 1px $color-shadow; // TODO on collapse, transmission between no shadow and shadow is ugly
+.home-section , .team-section , .contact-section {
+  background: blue;
 }
 
 .home-section {
   background: $color-home-bg;
-  padding-top: 150px; // for navbar (was inherited)
-  padding-bottom: 60px;
-
   text-align: left;
+  .home-title {
+    color: $color-bright-txt;
+  }
+  mark {
+    color: $color-bright-txt-detail;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
-.home-title {
-  color: $color-bright-txt;
 
-}
 
-mark {
-  color: $color-bright-txt-detail;
-  background-color: transparent;
-  padding: 0;
-
-}
-
-.home2-section {
+.introduction-section {
   background: $color-home2-bg;
-  padding-top: 50px;
-  padding-bottom: 60px;
-
   text-align: left;
 }
 
 .service-section {
   background: repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);
-
-  padding-top: 50px;
-  padding-bottom: 60px;
-
   text-align: left;
 }
 
 .team-section {
   background: $color-team-bg;
-  padding-top: 50px;
-  padding-bottom: 60px;
-
   text-align: left;
 
 }
 
 .portfolio-section {
   background: repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);
-
-  padding-top: 50px;
-  padding-bottom: 60px;
-
   text-align: left;
 
 }
@@ -101,8 +61,6 @@ mark {
 
 .contact-section {
   background: $color-contact-bg;
-  padding-top: 50px;
-  padding-bottom: 60px;
   text-align: left;
 
 }
@@ -113,11 +71,8 @@ mark {
 }
 
 .blue-section-title {
-
   margin-bottom: 40px;
-
   color: $color-bright-txt-detail;
-
   border-bottom: 10px solid $color-bright-txt-detail;
 }
 
