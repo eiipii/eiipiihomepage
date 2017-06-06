@@ -123,3 +123,21 @@ margin: 0;
   margin-top: 0;
   margin-bottom: 25px;
 }
+
+.persona-title-part {
+  background: $color-bright-txt-detail;
+}
+
+.persona-title-part > .photo {
+  padding: 0;
+}
+
+.persona-title-part > .text {
+  padding: 0;
+  color: $color-bright-txt;
+}
+
+
+.bio {
+  color: $color-bright-txt;
+}
