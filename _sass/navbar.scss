@@ -18,13 +18,12 @@
 }
 
 .navbar-brand {
-  padding: 0;
+  padding-top: 0; // to ensure that logo is centered vertically - not quite sure why it is not without this
 }
 
 .top-nav-collapse {
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 0; // to ensure proper logo left-alignment - not sure what happens on different screens
   box-shadow: 0 2px 20px 1px $color-shadow; // TODO on collapse, transmission between no shadow and shadow is ugly
   background: $color-navbar-collapsed;
   .navbar-nav > li > a {
