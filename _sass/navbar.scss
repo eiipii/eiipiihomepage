@@ -1,6 +1,6 @@
 
 
-.navbar { // TODO right side text-menu is not centered vertically - don't know why, since parent div is, and navbar doesnt have margin/padding
+.navbar {
   background: $color-navbar;
   border: none;
   .navbar-nav > li > a {

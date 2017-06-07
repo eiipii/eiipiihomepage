@@ -5,13 +5,14 @@
 @import "layout";
 @import "navbar";
 
-
-.home-section , .introduction-section, .service-section , .team-section , .portfolio-section , .contact-section {
+.home-section, .introduction-section, .service-section, .team-section, .portfolio-section, .contact-section {
 }
-.service-section , .portfolio-section {
+
+.service-section, .portfolio-section {
   background: green;
 }
-.home-section , .team-section , .contact-section {
+
+.home-section, .team-section, .contact-section {
   background: blue;
 }
 
@@ -27,8 +28,6 @@
     padding: 0;
   }
 }
-
-
 
 .introduction-section {
   background: $color-home2-bg;
@@ -83,7 +82,6 @@
 .team-square {
   background: $color-team-square;
   margin: 0; // overwriting well bottom margin of 20px
-
 }
 
 .team-text-div {
@@ -101,6 +99,10 @@
   margin-bottom: 0;
 }
 
+.thin-blue-line {
+  border-bottom: 2px solid $color-bright-txt-detail;
+}
+
 .team-photo {
   margin: 0;
 }
@@ -109,8 +111,10 @@
   margin-top: 0;
 }
 
+// CONTACT SECTION
+
 .contact-text-paragraph {
-margin: 0;
+  margin: 0;
 }
 
 .contact-text-paragraph > .dept-name {
@@ -124,20 +128,117 @@ margin: 0;
   margin-bottom: 25px;
 }
 
+// PERSONA SUBPAGE
+
 .persona-title-part {
   background: $color-bright-txt-detail;
+
+  .photo {
+    padding: 0;
+  }
+
+  .text {
+    padding: 0;
+    color: $color-bright-txt;
+  }
+
 }
 
-.persona-title-part > .photo {
-  padding: 0;
+// Skilled/Specialist/Expert object
+// skill-bar, skilled, specialist, expert, selected are part of Skill level bar from personas
+// equal, full-height and padding4x are helpers for the same object
+// TODO either:
+// 1. delete and put image instead
+// 2. make sure those reneder properly on small screens (solution - just hide their parents col with bootstrap grid system)
+
+.skill-bar {
+  background-color: $color-team-bg;
+  height: 100%;
+
+  h3 {
+    transform: rotate(90deg);
+    position: static;
+    padding: 25%;
+    margin: 0;
+  }
+
+}
+.skilled {
+  @extend .skill-bar;
+  height: 60%;
+}
+.specialist {
+  @extend .skill-bar;
+  height: 80%;
+}
+.expert {
+  @extend .skill-bar;
+  height: 100%
 }
 
-.persona-title-part > .text {
-  padding: 0;
+.selected {
+  background: $color-red;
   color: $color-bright-txt;
+  box-shadow: 5px 0px 20px 1px $color-team-square;
 }
 
+// via https://stackoverflow.com/a/22892773
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.full-height {
+  height: 100%
+}
+.padding4px {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+// end of the Skilled/Specialist/Expert object
 
 .bio {
   color: $color-bright-txt;
+  h3 {
+    margin-top: 0;
+  }
 }
+
+.panel {
+  border: none;
+  .panel-heading {
+    border-bottom: 2px solid $color-bright-txt-detail;
+    background: none;
+    padding: 0;
+  }
+  .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h4 {
+    font-weight: bold;
+    margin: 0;
+    mark {
+      font-weight: lighter;
+      font-stretch: extra-condensed;
+      font-size: 180%;
+      background: none;
+    }
+  }
+  p {
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+.vertical {
+  display: inline-block;
+  width: 20%;
+  height: 40px;
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
+
+
