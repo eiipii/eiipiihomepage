@@ -78,35 +78,54 @@
 .blue-text {
   color: $color-bright-txt-detail;
 }
+.team {
+  .team-square {
+    background: $color-team-square;
+    margin: 0; // overwriting well bottom margin of 20px
+  }
 
-.team-square {
-  background: $color-team-square;
-  margin: 0; // overwriting well bottom margin of 20px
+  .team-text-div {
+    margin: 0 10px 20px;
+
+    .team-text-name {
+      text-align: center;
+      margin-bottom: 0;
+      font-size: 160%;
+    }
+
+    .team-text-position {
+      text-align: center;
+      font-weight: bold;
+      font-stretch: condensed;
+      margin-bottom: 0;
+      font-size: 160%;
+    }
+  }
+
+  .team-photo {
+    padding: 10%;
+    max-height: 18vw; // TODO on desktop it ensures the img stay in proportions - WILL BRAKE THE MOBILE (since mobile is vertical)
+  }
+  .thumbnail {
+    margin-bottom: 10px;
+    border: 1px solid $color-bright-txt-detail;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+
+    background-color: $color-stripe-bg;
+    -webkit-transition: background-color .5s ease-in-out;
+    -o-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+  }
+  .thumbnail:hover,
+  .thumbnail:focus,
+  .thumbnail.active{
+    background-color: $color-contact-bg;
+  }
+
 }
-
-.team-text-div {
-  margin: 10px 10px 20px;
-}
-
-.team-text-name {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.team-text-position {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.thin-blue-line {
-  border-bottom: 2px solid $color-bright-txt-detail;
-}
-
-.team-photo {
-  margin: 0;
-}
-
 .no-top-margin {
   margin-top: 0;
 }
