@@ -37,6 +37,8 @@
 .service-section {
   background: repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);
   text-align: left;
+
+
 }
 
 .team-section {
@@ -283,6 +285,7 @@
   .icon-col {
     padding-top: 17vmin;
     vertical-align: middle;
+
     a {
       font-size: 5vmax;
       -webkit-transition: font-size .2s ease-in-out;
