@@ -61,7 +61,11 @@
 .contact-section {
   background: $color-contact-bg;
   text-align: left;
+}
 
+.persona-section{
+  padding-top: 50px;
+  height: 80vh; // overriding default 100vh to ensure there's no unnecessary scrolling
 }
 
 .section-title {
@@ -150,6 +154,10 @@
 }
 
 // PERSONA SUBPAGE
+
+.persona {
+  margin-top: 2vh;
+}
 
 .persona-title-part {
   .photo {
