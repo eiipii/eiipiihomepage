@@ -2,6 +2,8 @@
 // It lies in <source>/_sass, just waiting to be imported.
 // It does not contain the YAML front matter and has no corresponding output file in the built site.
 
+
+
 code, pre {
   font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
   color: green;
@@ -25,7 +27,8 @@ html {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh; // TODO changed from height to min-height, so longer sections have control,
+                     // but, if we want to later add some full-height scroll js, we need to remember that sections height may not be equal now
   padding-top: 60px;
 }
 

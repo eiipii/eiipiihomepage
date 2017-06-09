@@ -42,12 +42,13 @@
 .team-section {
   background: $color-team-bg;
   text-align: left;
-
+  padding-bottom: 4vh;
 }
 
 .portfolio-section {
   background: repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);
   text-align: left;
+  padding-bottom: 4vh;
 
 }
 
@@ -63,7 +64,7 @@
   text-align: left;
 }
 
-.persona-section{
+.persona-section {
   padding-top: 50px;
   height: 80vh; // overriding default 100vh to ensure there's no unnecessary scrolling
 }
@@ -161,10 +162,10 @@
 
 .persona-title-part {
   .photo {
-   padding-left: 0; // TODO this is a hack to ensure that photo is left aligned (so background color doesn't show on left)
-                    // it works, but it's bad - thanks to this hack, page width is 15px/each side wider than main page
-                    // and left side is visibly not in line with logo;
-                    // no idea how to solve this correctly (SO answers seems as hacky as this approach)
+    padding-left: 0; // TODO this is a hack to ensure that photo is left aligned (so background color doesn't show on left)
+    // it works, but it's bad - thanks to this hack, page width is 15px/each side wider than main page
+    // and left side is visibly not in line with logo;
+    // no idea how to solve this correctly (SO answers seems as hacky as this approach)
   }
 
   .text {
@@ -277,4 +278,21 @@
   transform: rotate(-90deg);
 }
 
+.next-section-icon {
+  text-align: center;
+  .icon-col {
+    padding-top: 17vmin;
+    vertical-align: middle;
+    a {
+      font-size: 5vmax;
+      -webkit-transition: font-size .2s ease-in-out;
+      -o-transition: font-size .2s ease-in-out;
+      transition: font-size .2s ease-in-out;
+      text-decoration: none;
+    }
 
+    a:hover {
+      font-size: 5.6vmax;
+    }
+  }
+}
