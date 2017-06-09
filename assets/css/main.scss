@@ -78,6 +78,7 @@
 .blue-text {
   color: $color-bright-txt-detail;
 }
+
 .team {
   .team-square {
     background: $color-team-square;
@@ -121,11 +122,12 @@
   }
   .thumbnail:hover,
   .thumbnail:focus,
-  .thumbnail.active{
+  .thumbnail.active {
     background-color: $color-contact-bg;
   }
 
 }
+
 .no-top-margin {
   margin-top: 0;
 }
@@ -150,17 +152,20 @@
 // PERSONA SUBPAGE
 
 .persona-title-part {
-  background: $color-bright-txt-detail;
-
   .photo {
-    padding: 0;
+   padding-left: 0; // TODO this is a hack to ensure that photo is left aligned (so background color doesn't show on left)
+                    // it works, but it's bad - thanks to this hack, page width is 15px/each side wider than main page
+                    // and left side is visibly not in line with logo;
+                    // no idea how to solve this correctly (SO answers seems as hacky as this approach)
   }
 
   .text {
-    padding: 0;
     color: $color-bright-txt;
   }
+}
 
+.persona-title-part > .box-background {
+  background: $color-bright-txt-detail;
 }
 
 // Skilled/Specialist/Expert object
@@ -182,14 +187,17 @@
   }
 
 }
+
 .skilled {
   @extend .skill-bar;
   height: 60%;
 }
+
 .specialist {
   @extend .skill-bar;
   height: 80%;
 }
+
 .expert {
   @extend .skill-bar;
   height: 100%
@@ -211,6 +219,7 @@
 .full-height {
   height: 100%
 }
+
 .padding6px {
   padding-left: 6px;
   padding-right: 6px;
