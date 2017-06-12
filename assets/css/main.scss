@@ -68,7 +68,6 @@
   text-align: left;
 }
 
-
 .section-title {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -169,10 +168,30 @@
     // it works, but it's bad - thanks to this hack, page width is 15px/each side wider than main page
     // and left side is visibly not in line with logo;
     // no idea how to solve this correctly (SO answers seems as hacky as this approach)
+
+    img {
+      border: 1px solid $color-person-photo-border;
+
+    }
   }
 
   .text {
     color: $color-bright-txt;
+  }
+
+  .name {
+    font-weight: bold;
+    margin-bottom: 0.1em;
+  }
+
+  .position {
+    margin-top: 0;
+    font-weight: 100;
+    margin-bottom: 1em;
+  }
+
+  .quote {
+    margin-top: 0;
   }
 }
 
@@ -258,12 +277,12 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .progress{
+  .progress {
     border-radius: 0;
     background-color: $color-team-square;
     box-shadow: none;
   }
-  .progress-bar{
+  .progress-bar {
     background-color: $color-bright-txt-detail;
     box-shadow: none;
   }
@@ -297,11 +316,10 @@
 // TODO arrows style is now controlled by bootstrap media query - we might want to add on-hover animation and change size later
 
 .carousel-control.left,
-.carousel-control.right{
+.carousel-control.right {
   background: none;
 
 }
-
 
 // END of PERSONA SUBPAGE
 
