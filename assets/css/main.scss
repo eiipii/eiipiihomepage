@@ -26,6 +26,13 @@
   }
   .home-icons {
     margin-top: 80px;
+    > .start {
+      opacity: 0;
+    }
+    h1 {
+      color: white;
+      text-align: left;
+    }
   }
   mark {
     color: $color-bright-txt-detail;
@@ -298,7 +305,7 @@
       font-stretch: extra-condensed;
       font-size: 180%;
       background: none;
-          }
+    }
   }
   p {
     text-align: left;
