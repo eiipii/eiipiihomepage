@@ -19,10 +19,13 @@
 .home-section {
   background: $color-home-bg;
   text-align: left;
-  min-height: 60vh;
+  min-height: 70vh;
 
   .home-title {
     color: $color-bright-txt;
+  }
+  .home-icons {
+    margin-top: 80px;
   }
   mark {
     color: $color-bright-txt-detail;
@@ -34,7 +37,8 @@
 .introduction-section {
   background: $color-home2-bg;
   text-align: left;
-  min-height: 40vh;
+  min-height: 30vh;
+  padding-top: 20px;
 
 }
 

@@ -3,3 +3,4 @@ _site/
 assets/images/bak/
 assets/images/fullsize/
 .idea/
+*.zip
