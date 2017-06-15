@@ -1,58 +1,57 @@
-//jQuery to collapse the navbar on scroll
+var homeBootonShow = function(){
+    $("#home").animate({
+        'min-height' : "70vh"
+    });
+};
+var runAnimation = function(){
+    var run = function (id,onEnd) {
+        var animation = "animated zoomInDown";
+        $(id).removeClass("invisible")
+            .addClass(animation)
+            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $(this).removeClass(animation);
+                if(onEnd) {
+                    onEnd();
+                }
+            });
+    };
+    var runIconAnimation = function (after) {
+        run('#icon1');
+        setTimeout(function () {
+            run('#icon2');
+        }, 300);
+        setTimeout(function () {
+            run('#icon3');
+        }, 600);
+        setTimeout(function () {
+            run('#icon4');
+        }, 900);
+        setTimeout(function () {
+            run('#icon5',after);
+        }, 1200);
+    };
+    runIconAnimation(function () {
+        Typed.new('#devflow', {
+            strings: ["Idea > Design > Code > Deploy > Enjoy > :)"],
+            typeSpeed: 20,
+            cursor: true
+            // callback: runIconAnimation
+        });
+        homeBootonShow();
+    });
+};
+
 $(window).scroll(function () {
     if ($(".navbar").offset().top > 50) {
         $(".nav-scroll").addClass("top-nav-collapse");
     } else {
         $(".nav-scroll").removeClass("top-nav-collapse");
-        var runIconAnimation = function (after) {
-            $('#icon1').addClass("animated zoomInDown");
-            $('#icon1').removeClass("start");
-            setTimeout(function () {
-                $('#icon2').addClass("animated zoomInDown");
-                $('#icon2').removeClass("start");
-            }, 300);
-            setTimeout(function () {
-                $('#icon3').addClass("animated zoomInDown");
-                $('#icon3').removeClass("start");
-            }, 600);
-            setTimeout(function () {
-                $('#icon4').addClass("animated zoomInDown");
-                $('#icon4').removeClass("start");
-            }, 900);
-            setTimeout(function () {
-                $('#icon5').addClass("animated zoomInDown");
-                $('#icon5').removeClass("start");
-                after();
-            }, 1200);
-        };
-        var runIconAnimationJquery = function () {
-            var speed = 600;
-            $('#icon1c').fadeTo(speed, 1);
-            $('#icon1').fadeTo(speed, 1, function () {
-                $('#icon2').fadeTo(speed, 1, function () {
-                    $('#icon3').fadeTo(speed, 1, function () {
-                        $('#icon4').fadeTo(speed, 1, function () {
-                            $('#icon5c').fadeTo(speed, 1);
-                            $('#icon5').fadeTo(speed, 1, function () {
-                                console.log("done");
-                            })
-                        })
-                    })
-                })
-            });
-        };
-        runIconAnimation(function(){
-            Typed.new('#devflow', {
-                strings: ["Idea > Design > Code > Deploy > Enjoy > :)"],
-                typeSpeed: 20,
-                cursor: true
-                // callback: runIconAnimation
-            });
-        });
-
+        runAnimation();
     }
 });
-
+$(function(){
+    runAnimation();
+});
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function () {

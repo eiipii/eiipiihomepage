@@ -4,6 +4,7 @@
 @import "colors";
 @import "layout";
 @import "navbar";
+@import "typed";
 
 .home-section, .introduction-section, .service-section, .team-section, .portfolio-section, .contact-section {
 }
@@ -19,18 +20,18 @@
 .home-section {
   background: $color-home-bg;
   text-align: left;
-  min-height: 70vh;
+  //min-height: 70vh;
 
   .home-title {
     color: $color-bright-txt;
   }
   .home-icons {
     margin-top: 80px;
-    > .start {
+    > .invisible {
       opacity: 0;
     }
-    h1 {
-      color: white;
+    h2 {
+      color: $color-main-title;
       text-align: left;
     }
   }
