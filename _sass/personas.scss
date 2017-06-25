@@ -1,5 +1,3 @@
-
-
 // PERSONA SUBPAGE
 .persona-section {
   padding-top: 50px;
@@ -8,6 +6,7 @@
     background-color: transparent;
   }
 }
+
 #carousel-personas {
   min-height: 80vh;
 }
@@ -28,23 +27,24 @@
     }
   }
 
-  .text {
+  h1, h2, h3 {
     color: $color-bright-txt;
   }
 
   .name {
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 0.1em;
   }
 
   .position {
     margin-top: 0;
-    font-weight: 100;
+    font-weight: 200;
     margin-bottom: 1em;
   }
 
   .quote {
     margin-top: 0;
+    font-weight: 400;
   }
 }
 
@@ -55,45 +55,53 @@
     height: 100%;
   }
 }
+
 .techview {
   margin-top: 20px;
 }
+
 .skillBarBox {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 0px;
+  padding-right: 16px;
 }
 
 .skill-bar {
   background-color: #FFFFFF;
   height: 100%;
   p {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     position: static;
     padding: 25%;
     margin: 0;
     font-size: 22px;
+    color: $color-main-title;
+  }
+  &.selected {
+    background: $color-red;
+    box-shadow: 5px 0px 20px 1px #a7b0bb;
+    p {
+      color: $color-bright-txt;
+    }
   }
 }
 
 .skilled {
   @extend .skill-bar;
-  margin-top: 78px;
+  margin-top: 120px;
+  padding-top: 70px;
   overflow: hidden;
 }
 
 .specialist {
   @extend .skill-bar;
-  margin-top: 39px;
+  margin-top: 70px;
+  padding-top: 120px;
 }
 
 .expert {
   @extend .skill-bar;
-}
-
-.selected {
-  background: $color-red;
-  color: $color-bright-txt;
-  box-shadow: 5px 0px 20px 1px $color-team-square;
+  margin-top: 20px;
+  padding-top: 170px;
 }
 
 // via https://stackoverflow.com/a/22892773
@@ -102,7 +110,6 @@
   display: -webkit-flex;
   flex-wrap: wrap;
 }
-
 
 // end of the Skilled/Specialist/Expert object
 
@@ -179,10 +186,10 @@
     color: $color-main-blue;
   }
 }
+
 .carousel-control.left,
 .carousel-control.right {
   background: none;
 }
-
 
 // END of PERSONA SUBPAGE

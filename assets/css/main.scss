@@ -7,6 +7,10 @@
 @import "typed";
 @import "headers";
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .home-section, .introduction-section, .service-section, .team-section, .portfolio-section, .contact-section {
 }
 
@@ -90,6 +94,7 @@
 .section-title {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: 'Bad Script', cursive;
 }
 
 .blue-section-title {
