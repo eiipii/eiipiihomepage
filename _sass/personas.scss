@@ -1,0 +1,192 @@
+
+
+// PERSONA SUBPAGE
+.persona-section {
+  padding-top: 50px;
+  min-height: 60vh; // overriding default 100vh to ensure there's no unnecessary scrolling
+  .panel-default {
+    background-color: transparent;
+  }
+}
+
+.persona {
+  margin-top: 2vh;
+}
+
+.persona-title-part {
+  .photo {
+    padding-left: 0; // TODO this is a hack to ensure that photo is left aligned (so background color doesn't show on left)
+    // it works, but it's bad - thanks to this hack, page width is 15px/each side wider than main page
+    // and left side is visibly not in line with logo;
+    // no idea how to solve this correctly (SO answers seems as hacky as this approach)
+
+    img {
+      //border: 1px solid $color-person-photo-border;
+    }
+  }
+
+  .text {
+    color: $color-bright-txt;
+  }
+
+  .name {
+    font-weight: bold;
+    margin-bottom: 0.1em;
+  }
+
+  .position {
+    margin-top: 0;
+    font-weight: 100;
+    margin-bottom: 1em;
+  }
+
+  .quote {
+    margin-top: 0;
+  }
+}
+
+.persona-title-part > .box-background {
+  background: $color-bright-txt-detail;
+}
+.techview {
+  margin-top: 20px;
+}
+
+// Skilled/Specialist/Expert object
+// skill-bar, skilled, specialist, expert, selected are part of Skill level bar from personas
+// equal, full-height and padding4x are helpers for the same object
+// TODO either:
+// 1. delete and put image instead
+// 2. make sure those reneder properly on small screens (solution - just hide their parents col with bootstrap grid system)
+
+.skill-bar {
+  background-color: #FFFFFF;
+  height: 100%;
+
+  h3 {
+    transform: rotate(90deg);
+    position: static;
+    padding: 25%;
+    margin: 0;
+  }
+
+}
+
+.skilled {
+  @extend .skill-bar;
+  height: 60%;
+}
+
+.specialist {
+  @extend .skill-bar;
+  height: 80%;
+}
+
+.expert {
+  @extend .skill-bar;
+  height: 100%
+}
+
+.selected {
+  background: $color-red;
+  color: $color-bright-txt;
+  box-shadow: 5px 0px 20px 1px $color-team-square;
+}
+
+// via https://stackoverflow.com/a/22892773
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.full-height {
+  height: 100%
+}
+
+.padding6px {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+// end of the Skilled/Specialist/Expert object
+
+.bio {
+  color: $color-bright-txt;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    color: $color-dark-txt;
+  }
+}
+
+.panel-skills {
+  border: none;
+  box-shadow: none;
+  .panel-heading {
+    border-bottom: 2px solid $color-bright-txt-detail;
+    background: none;
+    padding: 0;
+  }
+  .panel-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .progress {
+    border-radius: 0;
+    background-color: #FFF;
+    box-shadow: none;
+  }
+  .progress-bar {
+    background-color: $color-bright-txt-detail;
+    box-shadow: none;
+  }
+  h4 {
+    font-weight: bold;
+    color: $color-dark-txt;
+    margin: 0;
+    mark {
+      color: $color-dark-txt;
+      font-weight: lighter;
+      font-stretch: extra-condensed;
+      //font-size: 180%;
+      background: none;
+      display: none;
+    }
+  }
+  p {
+    color: $color-dark-txt;
+    line-height: 0;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+.vertical {
+  display: inline-block;
+  width: 20%;
+  height: 40px;
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
+
+// carousel changes
+
+// overriding default left/right control arrow gradient background - looks bad in our case
+// TODO arrows style is now controlled by bootstrap media query - we might want to add on-hover animation and change size later
+
+.carousel-control {
+  color: $color-main-title;
+  opacity: 1;
+  text-shadow: none;
+  &:hover {
+    color: $color-main-blue;
+  }
+}
+.carousel-control.left,
+.carousel-control.right {
+  background: none;
+}
+
+// END of PERSONA SUBPAGE

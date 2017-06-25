@@ -13,6 +13,10 @@ body {
   width: 100%;
   height: 100%;
   padding-top: 60px;
+  //background: $bg-lines;
+}
+.personas {
+  background-color: $color-personas-bg;
 }
 
 html {
@@ -31,4 +35,6 @@ section {
                      // but, if we want to later add some full-height scroll js, we need to remember that sections height may not be equal now
   padding-top: 60px;
 }
+
+
 

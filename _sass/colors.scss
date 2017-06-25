@@ -11,7 +11,9 @@ $color-services-bg: #FFFFFF;
 $color-team-bg: #f3f3f3;
 $color-team-square: #e6e6e6;
 $color-portfolio-bg: #ffffff; // TODO pattern
+$color-portfolio-headers: #666666; // TODO pattern
 $color-contact-bg: #f3f3f3;
+$color-personas-bg: #f3f3f3;
 
 $color-stripe-bg: #f9f9f9;
 
@@ -26,3 +28,6 @@ $color-dark-txt-detail: #78D1FF;
 $color-red: #f15a24;
 
 $color-person-photo-border: rgba(207, 207, 207, 0.56);
+
+
+$bg-lines : repeating-linear-gradient(-45deg, $color-stripe-bg, $color-stripe-bg 2px, $color-services-bg 2px, $color-services-bg 40px);

@@ -1,5 +1,4 @@
 
-
 .navbar {
   background: $color-navbar;
   border: none;
@@ -11,6 +10,17 @@
   }
   .darkLogo {
     display: block;
+  }
+  .navbar-nav > li {
+    > a {
+      color: $color-main-title;
+    }
+    > a:hover {
+      color: #FFF;
+    }
+    > a:focus {
+      color: #FFF;
+    }
   }
 }
 
@@ -26,8 +36,16 @@
   padding-bottom: 10px;
   box-shadow: 0 2px 20px 1px $color-shadow; // TODO on collapse, transmission between no shadow and shadow is ugly
   background: $color-navbar-collapsed;
-  .navbar-nav > li > a {
-    color: $color-main-blue;
+  .navbar-nav > li {
+    > a {
+      color: $color-main-title;
+    }
+    > a:hover {
+      color: $color-main-blue;
+    }
+    > a:focus {
+      color: $color-main-blue;
+    }
   }
   .normalLogo {
     display: block;
@@ -36,8 +54,6 @@
     display: none;
   }
 }
-
-
 
 @media(min-width: 767px) {
   .navbar {

@@ -7,5 +7,9 @@ description: > # this means to ignore newlines until "baseurl:"
   footer comes with theme layout - we'll probably change it anyway, so I'm leaving it for now
 baseurl: "" # MESSY PART WITH THE gh-pages
 
+# deployment
+host: 0.0.0.0
+port: 4000
+
 sass:
     sass_dir: _sass
