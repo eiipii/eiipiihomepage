@@ -3,10 +3,13 @@
 // PERSONA SUBPAGE
 .persona-section {
   padding-top: 50px;
-  min-height: 60vh; // overriding default 100vh to ensure there's no unnecessary scrolling
+  min-height: 80vh;
   .panel-default {
     background-color: transparent;
   }
+}
+#carousel-personas {
+  min-height: 80vh;
 }
 
 .persona {
@@ -47,44 +50,44 @@
 
 .persona-title-part > .box-background {
   background: $color-bright-txt-detail;
+  overflow: hidden;
+  div {
+    height: 100%;
+  }
 }
 .techview {
   margin-top: 20px;
 }
-
-// Skilled/Specialist/Expert object
-// skill-bar, skilled, specialist, expert, selected are part of Skill level bar from personas
-// equal, full-height and padding4x are helpers for the same object
-// TODO either:
-// 1. delete and put image instead
-// 2. make sure those reneder properly on small screens (solution - just hide their parents col with bootstrap grid system)
+.skillBarBox {
+  padding-left: 6px;
+  padding-right: 6px;
+}
 
 .skill-bar {
   background-color: #FFFFFF;
   height: 100%;
-
-  h3 {
+  p {
     transform: rotate(90deg);
     position: static;
     padding: 25%;
     margin: 0;
+    font-size: 22px;
   }
-
 }
 
 .skilled {
   @extend .skill-bar;
-  height: 60%;
+  margin-top: 78px;
+  overflow: hidden;
 }
 
 .specialist {
   @extend .skill-bar;
-  height: 80%;
+  margin-top: 39px;
 }
 
 .expert {
   @extend .skill-bar;
-  height: 100%
 }
 
 .selected {
@@ -100,14 +103,6 @@
   flex-wrap: wrap;
 }
 
-.full-height {
-  height: 100%
-}
-
-.padding6px {
-  padding-left: 6px;
-  padding-right: 6px;
-}
 
 // end of the Skilled/Specialist/Expert object
 
@@ -188,5 +183,6 @@
 .carousel-control.right {
   background: none;
 }
+
 
 // END of PERSONA SUBPAGE

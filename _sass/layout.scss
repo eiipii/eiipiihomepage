@@ -15,8 +15,11 @@ body {
   padding-top: 60px;
   //background: $bg-lines;
 }
-.personas {
+.personas-body {
   background-color: $color-personas-bg;
+}
+.main-body {
+  background: $bg-lines;
 }
 
 html {
@@ -32,7 +35,6 @@ html {
 
 section {
   min-height: 100vh; // TODO changed from height to min-height, so longer sections have control,
-                     // but, if we want to later add some full-height scroll js, we need to remember that sections height may not be equal now
   padding-top: 60px;
 }
 
