@@ -3,12 +3,23 @@ DONE 2. js - scroll menu highlight
 DONE (icons were commented out by purpose) 3. main introduction icons section - project
 DONE - links did not scroll to proper place
 
+Todo mobile:
 
-Tasks / Checklist for mobile:
-- decide which elements will not be shown on mobile (rule of thumb - everything problematic at the begginging, we can add it later when we have time)
-- all vh, vw units might seriously mess up layout
-- photo miniatures
-- navbar changes
+1. Tablet (XXXX x 1024) resolutions - personas is broken, as is portfolio carousel
+
+2. Navbar - collapse CSS transmition (animations) do not work on mobile, so the blue->white background change looks bad - maybe should be turned off?
+
+3. Home team section - now it's single photo in a row, which means a lot of scrolling. But 2x photos in row won't fit (or rather name tags won't fit). Decision here needed - we can turn of the names and do 2 or 3 photos without text in row, or we need to make separate mobile object for team section (dropdown?).
+
+4. Home - I turned off all the animations - I think we need something instead there, either static, or part of the animations. But it's OK for now.
+
+
+***
+
+Tasks / Checklist for final steps:
+
+- all vh, vw units might seriously mess up layout - ensure that they are ok on strange (desktop windows rescalling) resolutions
+- photo miniatures - ensure that they are ok on strange (desktop windows rescalling) resolutions
 
 Closure - ADD BIOS
 
