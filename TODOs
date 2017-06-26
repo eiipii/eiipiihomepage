@@ -1,7 +1,16 @@
 DONE 1. main - portfolio - carousel
-DONE, but problem with animation 2. js - scroll menu highlight
-DONE - icons were commented out by purpose 3. main introduction icons section - project
-4. bar -
+DONE 2. js - scroll menu highlight
+DONE (icons were commented out by purpose) 3. main introduction icons section - project
+DONE - links did not scroll to proper place
+
+
+Tasks / Checklist for mobile:
+- decide which elements will not be shown on mobile (rule of thumb - everything problematic at the begginging, we can add it later when we have time)
+- all vh, vw units might seriously mess up layout
+- photo miniatures
+- navbar changes
+
+Closure - ADD BIOS
 
 Future:
 1. skill bar animation
