@@ -79,11 +79,17 @@ body {
   background: $bg-lines;
   text-align: left;
   padding-bottom: 4vh;
+  height: 100vh; // to ensure that if added text is too long, it will break div (so the mistake will be visible)
   p {
     color: $color-dark-txt;
   }
   li {
     font-size: 20px;
+  }
+  .carousel-mobile-fixed-height {
+    @media only screen and (max-width : 768px) {
+      height: 100%;
+    }
   }
 }
 
@@ -223,3 +229,4 @@ body {
 }
 
 @import "personas";
+

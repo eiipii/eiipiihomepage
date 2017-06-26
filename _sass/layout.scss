@@ -35,7 +35,7 @@ html {
 section {
   min-height: 100vh; // TODO changed from height to min-height, so longer sections have control,
   padding-top: 60px;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     padding-top: 30px;
   }
 
