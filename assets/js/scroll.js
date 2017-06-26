@@ -1,7 +1,8 @@
 var homeBootonShow = function(){
-    $("#home").animate({
-        'min-height' : "70vh"
-    });
+    $("#animatedslide").addClass("animated fadeOutUp")
+        .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $(this).remove();
+        });
 };
 var runAnimation = function(){
     var run = function (id,onEnd) {
