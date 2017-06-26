@@ -1,3 +1,13 @@
+// TODO - mobile - uncollopsed has a ugly line above text (without border: none it's bigger, but border: none is not enuogh to make it dissapear - seems like two lines overlapped before)
+// TODO - mobile - generally, the nav list which is shown after clicking the hamburger icon doesnt look nice
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+
+  @media only screen and (max-width : 768px) {
+    border: none;
+    text-align: right;
+  }
+}
 
 .navbar {
   background: $color-navbar;
@@ -25,7 +35,11 @@
     }
   }
 
-}
+  @media only screen and (max-width : 768px) {
+    padding: 10px 0;
+  }
+
+  }
 
 .navbar-default .navbar-nav > .active > a {
   background: none;
@@ -41,7 +55,7 @@
 .top-nav-collapse {
   padding-top: 10px;
   padding-bottom: 10px;
-  box-shadow: 0 2px 20px 1px $color-shadow; // TODO on collapse, transmission between no shadow and shadow is ugly
+  box-shadow: 0 2px 20px 1px $color-shadow;
   background: $color-navbar-collapsed;
   .navbar-nav > li {
     > a {

@@ -58,13 +58,14 @@ body {
 
 .introduction-section {
   text-align: left;
-  min-height: 30vh;
+  min-height: 25vh;
   padding-top: 20px;
+  padding-bottom: 30px;
   background-color: $color-home2-bg;
 }
 
 .service-section {
-//  padding-top: 20px;
+  //  padding-top: 20px;
   text-align: left;
 }
 
@@ -118,6 +119,10 @@ body {
 .service-text {
   color: $color-bright-txt-detail;
   padding-top: 52px;
+  @media only screen and (max-width: 768px) {
+    padding-top: 10px;
+  }
+
 }
 
 .team {
@@ -168,7 +173,9 @@ body {
 }
 
 .no-top-margin {
-  margin-top: 0;
+  @media only screen and (min-width: 480px) {
+    margin-top: 0;
+  }
 }
 
 .frameimage {
@@ -183,7 +190,7 @@ body {
 
 .contact-text-paragraph > .dept-name {
   font-weight: bold;
-  margin: 0;
+  // in pdf was 0, but didnt work well for mobile  margin: 0;
 }
 
 .contact-text-paragraph > .address {

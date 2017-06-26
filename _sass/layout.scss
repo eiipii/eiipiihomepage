@@ -2,8 +2,6 @@
 // It lies in <source>/_sass, just waiting to be imported.
 // It does not contain the YAML front matter and has no corresponding output file in the built site.
 
-
-
 code, pre {
   font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
   color: green;
@@ -15,9 +13,11 @@ body {
   padding-top: 60px;
   //background: $bg-lines;
 }
+
 .personas-body {
   background-color: $color-personas-bg;
 }
+
 .main-body {
   background: $bg-lines;
 }
@@ -27,7 +27,6 @@ html {
   height: 100%;
 }
 
-
 .content {
   width: 80%;
   margin: 0 auto;
@@ -36,5 +35,9 @@ html {
 section {
   min-height: 100vh; // TODO changed from height to min-height, so longer sections have control,
   padding-top: 60px;
+  @media only screen and (max-width: 480px) {
+    padding-top: 30px;
+  }
+
 }
 
