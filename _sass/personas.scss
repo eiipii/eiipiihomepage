@@ -21,7 +21,9 @@
     // it works, but it's bad - thanks to this hack, page width is 15px/each side wider than main page
     // and left side is visibly not in line with logo;
     // no idea how to solve this correctly (SO answers seems as hacky as this approach)
-
+    @media only screen and (max-width: 768px) {
+      padding-right: 0;
+    }
     img {
       //border: 1px solid $color-person-photo-border;
     }
