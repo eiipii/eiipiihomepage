@@ -146,7 +146,9 @@ body {
 
   .team-photo {
     padding: 10%;
-    max-height: 18vw; // TODO on desktop it ensures the img stay in proportions - WILL BRAKE THE MOBILE (since mobile is vertical) and not typical resolutions
+    @media only screen and (min-width: 768px) {
+      max-height: 18vw; // TODO on desktop it ensures the img stay in proportions - WILL BRAKE THE MOBILE (since mobile is vertical) and not typical resolutions
+    }
   }
   .thumbnail {
     margin-bottom: 10px;
