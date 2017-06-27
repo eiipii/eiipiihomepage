@@ -7,7 +7,7 @@ Todo mobile:
 
 1. Tablet (XXXX x 1024) resolutions - personas is broken, as is portfolio carousel
 
-2. Navbar - collapse CSS transmition (animations) do not work on mobile, so the blue->white background change looks bad - maybe should be turned off?
+2. Navbar - collapse CSS transmition (animations) does not work on mobile, so the blue->white background change looks bad - maybe should be turned off?
 
 3. Home team section - now it's single photo in a row, which means a lot of scrolling. But 2x photos in row won't fit (or rather name tags won't fit). Decision here needed - we can turn of the names and do 2 or 3 photos without text in row, or we need to make separate mobile object for team section (dropdown?).
 
