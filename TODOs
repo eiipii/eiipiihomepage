@@ -3,6 +3,10 @@ DONE 2. js - scroll menu highlight
 DONE (icons were commented out by purpose) 3. main introduction icons section - project
 DONE - links did not scroll to proper place
 
+Todo personas:
+
+Photos still have a gap on the bottom on some common desktop resolutions - i mustve overlooked it before. Solution - col division change from 3 to 4? But this would change whole section height, so it's not best.
+
 Todo mobile:
 
 1. Portfolio carousel is still broken on most horizontal mobiles/smartphones (and some XS phones in vertocal - but i expect single fix will fix it all)
