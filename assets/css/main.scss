@@ -153,6 +153,13 @@ body {
     }
   }
 
+  .mobile-team-text {
+    color: $color-dark-txt;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
   .team-photo {
     padding: 10%;
     @media only screen and (min-width: 992px) {
