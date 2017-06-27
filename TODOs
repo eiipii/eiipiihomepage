@@ -5,7 +5,7 @@ DONE - links did not scroll to proper place
 
 Todo mobile:
 
-1. Tablet (XXXX x 1024) resolutions - personas is broken, as is portfolio carousel
+1. Portfolio carousel is still broken on most horizontal mobiles/smartphones (and some XS phones in vertocal - but i expect single fix will fix it all)
 
 2. Navbar - collapse CSS transmition (animations) does not work on mobile, so the blue->white background change looks bad - maybe should be turned off?
 
@@ -13,6 +13,8 @@ Todo mobile:
 
 4. Home - I turned off all the animations - I think we need something instead there, either static, or part of the animations. But it's OK for now.
 
+
+DESKTOP PROBLEM - on width
 
 ***
 
