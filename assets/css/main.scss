@@ -155,7 +155,7 @@ body {
 
   .team-photo {
     padding: 10%;
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
       max-height: 18vw; // TODO on desktop it ensures the img stay in proportions - WILL BRAKE THE MOBILE (since mobile is vertical) and not typical resolutions
     }
   }
