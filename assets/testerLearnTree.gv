@@ -1,0 +1,149 @@
+digraph G {
+/****************/
+/* STYLE
+     no changes required if adding new skill */
+        rankdir = "LR"
+        forcelabels=true;
+        fontname = "Bitstream Vera Sans"
+        fontsize = 10
+        bgcolor = transparent
+        node [
+                fontname = "Bitstream Vera Sans"
+                fontsize = 10
+                shape = box
+                width = 1
+                height = 0.5
+                style = filled
+                fillcolor = whitesmoke
+
+        ]
+        edge [
+                splines="ortho"
+                headport=e
+                headport=w
+        ]
+
+
+/* end of STYLE */
+/****************/
+
+/****************/
+/* NODES - add here new skills
+       to allow for second line in node, which is handy, here are templates:
+       1.  no_white_space;
+       2.  single_line_with_whitespace [label=<Java and Scala>];
+       3.  <alternative single line with spaces, but problem with names>;
+       4.  alt3 [label=<alternative single line with spaces, no problem with names>];
+       4.  with_comment [label=<Java and Scala<BR /><FONT POINT-SIZE="8">Comment</FONT>>];
+*/
+
+General
+    Networking [label=<Networking<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+        HTTP [label=<Networking<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+        TCPIP [label=<TCP/IP<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+        SSH [label=<SSH<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+        REST [label=<REST, API, contracts<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+    Frontend_Backend [label=<Frontend vs Backend<BR /><FONT POINT-SIZE="8">basic idea</FONT>>]
+    Databases
+        Relational_DB [label=<Relational DB<BR /><FONT POINT-SIZE="8">basic theory - relations</FONT>>]
+            SQL [label=<SQL<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+                FK [label=<Foreign keys <BR /><FONT POINT-SIZE="8">https://dev.mysql.com/doc/refman/5.7/en/mysql-indexes.html</FONT>>]
+                Indexes [label=<Indexes - what and why <BR /><FONT POINT-SIZE="8">https://dev.mysql.com/doc/refman/5.7/en/mysql-indexes.html</FONT>>]
+                Popular_SQL [label=<Popular SQL DBMS<BR /><FONT POINT-SIZE="8">on the market</FONT>>]
+                    Read_Queries [label=<Read Queries>]
+                        Write_Queries [label=<Write Queries>]
+        Non_Relational_DB [label=<Non-Relational DB<BR /><FONT POINT-SIZE="8">basics</FONT>>]
+            Popular_NoSQL_DB [label=<Popular NoSQL DBMS<BR /><FONT POINT-SIZE="8">on the market</FONT>>]
+    Deployment
+        CI [label=<Continuous Integration<BR /><FONT POINT-SIZE="8">understand the idea</FONT>>]
+            Travis
+    it_projects [label=<IT Project<BR /><FONT POINT-SIZE="8">basics and all things related</FONT>>]
+        ProjectMngmt [label=<Project management<BR /><FONT POINT-SIZE="8">theory</FONT>>]
+            Prince2
+            PMBOK
+        SDLC [label=<Software Development Life Cycle<BR /><FONT POINT-SIZE="8">theory</FONT>>]
+            GeneralInfo [label=<General introduction <BR /><FONT POINT-SIZE="8">sii.pl/blog/cykl-zycia-projektu-faza-planowania/</FONT>>]
+            Models
+                Waterfall [label=<Waterfall model>]
+                V [label=<V-model>]
+                Iterative [label=<Iterative model(s)>]
+                Agile [label=<Agile model(s)>]
+                Spiral [label=<Spiral model<BR /><FONT POINT-SIZE="8">less important</FONT>>]
+                BigBang [label=<Big Bang model<BR /><FONT POINT-SIZE="8">less important</FONT>>]
+                RAD [label=<Rapid Application Development model<BR /><FONT POINT-SIZE="8">less important</FONT>>]
+        Terms
+            MVP
+            CI
+
+
+
+Tools
+    Project_Tools [label=<Project Tools>]
+        VSC [label=<Version Control System>]
+            GIT [label=<GIT<BR /><FONT POINT-SIZE="8">important!</FONT>>]
+            Mercurial [label=<Mercurial<BR /><FONT POINT-SIZE="8">just know that exist</FONT>>]
+            CVS [label=<CVS<BR /><FONT POINT-SIZE="8">just know that exists</FONT>>]
+            SVN [label=<SVN<BR /><FONT POINT-SIZE="8">just know that exists</FONT>>]
+        ALM [label=<Application lifecycle management<BR /><FONT POINT-SIZE="8">tools family<BR />understand the purpose</FONT>>]
+            HPQC [label=<HP ALM / Quality Center<BR /><FONT POINT-SIZE="8">formerly HP/Mercury Quality Center<BR />whole QA-oriented project mngmt platform</FONT>>]
+            jira
+    Automatic_Testing [label=<Automatic Testing>]
+        Selenium
+        Appium
+        TestComplete
+        soup [label=<soup.ui<BR /><FONT POINT-SIZE="8">API testing automation framework</FONT>>]
+
+            UFT [label=<Unified Functional Testing<BR /><FONT POINT-SIZE="8">former HP Quick Test</FONT>>]
+
+Testing_Theory [label=<Testing Theory>]
+    ISTQB_Gloss [label=<ISTQB Glossary<BR /><FONT POINT-SIZE="8">F (beginner) level</FONT>>]
+    Internal_Presentation [label=<Internal Presentation>]
+
+
+Mobile_centric [label=<Mobile centric>]
+    Mobile_OSes [label=<Mobile OSes>]
+        Vendors [label=<Store vendors for OS<BR /><FONT POINT-SIZE="8">and important vendor requirements</FONT>>]
+        OS_languages [label=<OS languages>]
+    App_differences [label=<Native / Web / Hybrid<BR /><FONT POINT-SIZE="8">app differences</FONT>>]
+    Mobile_QA_problems [label=<Mobile-only QA problems>]
+        Amount_of_hardware [label=<Amount of hardware>]
+        Amount_of_os_versions [label=<Amount of OS versions>]
+        Mobile_UX_UI [label=<Mobile UX and UI>]
+            Screen_proportions [label=<Screen proportions and resolutions>]
+            OS_guidelines [label=<OS-specific UX and UI guidelines<BR /><FONT POINT-SIZE="8">Material vs HIG</FONT>>]
+        Interruptions [label=<Dealing with interruptions<BR /><FONT POINT-SIZE="8">calls, notifi, msgs, api, etc</FONT>>]
+        Mobile_HardwareInterruptions [label=<Hardware-dependent functions<BR /><FONT POINT-SIZE="8">GPS, gyro, acc, biometrics, etc</FONT>>]
+    Mobile_testing_frameworks [label=<Mobile testing frameworks<BR /><FONT POINT-SIZE="8">mostly advanced tools requiring some coding</FONT>>]
+        Android
+            Appium[label=<Appium.io<BR /><FONT POINT-SIZE="8">cross OS</FONT>>]
+            Calabash[label=<Calabash<BR /><FONT POINT-SIZE="8">cross OS</FONT>>]
+            Selendroid
+            UIAutomator[label=<UIAutomator<BR /><FONT POINT-SIZE="8">Google tool</FONT>>]
+            Espresso
+        iOS
+            Appium
+            Calabash
+            UIAutomation [label=<UIAutomation<BR /><FONT POINT-SIZE="8">deprecated Apple tool</FONT>>]
+            EarlGrey [label=<EarlGrey<BR /><FONT POINT-SIZE="8">Google framework for iOS, similar to Espresso</FONT>>]
+
+
+
+
+/* end of NODES */
+/****************/
+
+/****************/
+/* TREE RELATIONS - add relations here
+        it is enough to just add last link of the tree, no full path:
+        a -> b -> c EQUALS a -> b; b -> c                           */
+
+
+Testing_Theory -> {
+    Internal_Presentation -> ISTQB_Gloss
+    }
+
+
+/* end of RELATIONS */
+/****************/
+
+}
